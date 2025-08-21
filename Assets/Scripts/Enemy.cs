@@ -5,11 +5,8 @@ using UnityEngine;
 public class Enemy : Entity
 {
     [Header("Enemy Properties")]
-    [Tooltip("A range that is a percentage of the fire rate, with waiting for the full fire rate being at 0 and spontaneous randomness from 0 seconds to the full fire rate at 1")]
-    [Range(0f, 1f)]
-    [SerializeField] private float fireRateRandomness = 0f;
+    [SerializeField] private int scoreValue = 1;
 
-    private Rigidbody2D rb;
     private Transform[] wavePoints;
     private Transform currentPoint;
     private int index;
@@ -17,10 +14,14 @@ public class Enemy : Entity
 
     public void SetPath(Transform[] path)
     {
-        wavePoints = path;
-        index = 0;
-        currentPoint = wavePoints[index];
-        beginPathTraversal = true;
+        wavePoints  = path;
+        index       = 0;
+
+        currentPoint        = wavePoints[index];
+        beginPathTraversal  = true;
+        
+        if (projectile != null)
+            StartCoroutine(Fire(true));
     }
 
     private void FollowPath()
@@ -65,6 +66,8 @@ public class Enemy : Entity
 
         if (health <= 0)
         {
+            ScoreManager.IncreaseScore(scoreValue);
+
             // Handle enemy death (e.g., play animation, point calculations, etc.)
             Destroy(gameObject);
         }

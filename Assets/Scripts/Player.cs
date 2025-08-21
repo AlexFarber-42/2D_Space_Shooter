@@ -4,7 +4,8 @@ using UnityEngine.InputSystem;
 
 public class Player : Entity
 {
-    public GameObject projPrefabTest;
+    [Header("Player Settings")]
+    [SerializeField] private int maxHealth = 3;
 
     public InputActionAsset PlayerInput;
 
@@ -15,6 +16,8 @@ public class Player : Entity
 
     private Rigidbody2D rb;
     private Coroutine isFiring = null;
+
+    public int MaxHealth { get => maxHealth; }
 
     private void OnEnable()
     {
@@ -32,6 +35,7 @@ public class Player : Entity
         inputFire       = InputSystem.actions.FindAction("Fire");
 
         rb              = GetComponent<Rigidbody2D>();
+        health          = maxHealth;
     }
 
     private void Update()
@@ -41,7 +45,7 @@ public class Player : Entity
 
         // Firing Logic
         if (inputFire.IsPressed() && isFiring is null)
-            isFiring = StartCoroutine(Fire());
+            isFiring = StartCoroutine(Fire(false));
         else if (!inputFire.IsPressed() && isFiring is not null)
         {
             StopCoroutine(isFiring);
@@ -59,23 +63,12 @@ public class Player : Entity
         rb.MovePosition(rb.position + moveSpeed * Time.deltaTime * movementDir);
     }
 
-    private IEnumerator Fire()
-    {
-        while (true)
-        {
-            // TODO ---> Add Pooling
-            GameObject projInstance = Instantiate(projPrefabTest, transform.position, Quaternion.identity);
-            Projectile proj = projInstance.GetComponent<Projectile>();
-
-            proj.IsHostileProjectile = false;
-            proj.FireProjectile();
-            yield return new WaitForSeconds(fireRate);
-        }
-    }
+    
 
     public override void Damage(int damage)
     {
         base.Damage(damage);
+        PlayerGUIManager.Instance.DecreaseHealthBar(damage);
 
         if (health <= 0)
         {

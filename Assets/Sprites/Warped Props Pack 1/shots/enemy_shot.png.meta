@@ -1,12 +1,5 @@
 fileFormatVersion: 2
-guid: 0e2c13116ccc94921858a1b8f12ada6c
-AssetOrigin:
-  serializedVersion: 1
-  productId: 153684
-  packageName: Warped Props Pack 1
-  packageVersion: 1.0
-  assetPath: Assets/Warped Props Pack 1/shots/shot-05-02.png
-  uploadId: 328673
+guid: 1196e5f1edbf1034bafd9208dc292936
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

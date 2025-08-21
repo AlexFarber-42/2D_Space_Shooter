@@ -32,11 +32,9 @@ public class Projectile : MonoBehaviour
 
     public void FireProjectile()
     {
-        // Shift the projectiles direction based on whether it's hostile or not
-        if (hostileProj)
-            transform.forward = Vector3.down;
-
         rb = GetComponent<Rigidbody2D>();
-        rb.AddForceY(projectileSpeed, ForceMode2D.Impulse);
+
+        int dir = hostileProj ? -1 : 1;
+        rb.AddForceY(projectileSpeed * dir, ForceMode2D.Impulse);
     }
 }
