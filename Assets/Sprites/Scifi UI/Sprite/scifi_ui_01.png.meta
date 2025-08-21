@@ -1,9 +1,16 @@
 fileFormatVersion: 2
 guid: 0cb25cc02c2b6664d895b5e254c5d412
+AssetOrigin:
+  serializedVersion: 1
+  productId: 170207
+  packageName: Scifi Game UI
+  packageVersion: 1.0
+  assetPath: Assets/Scifi UI/Sprite/scifi_ui_01.png
+  uploadId: 371977
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,9 +27,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -32,11 +42,11 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -54,23 +64,30 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
-    resizeAlgorithm: 0
+    resizeAlgorithm: 1
     textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -80,9 +97,10 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -92,12 +110,3736 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: scifi_ui_01_0
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 877
+        width: 102
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fc91be1c78ab974086ff1f5d91027a3
+      internalID: -16488558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_1
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 876
+        width: 102
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22258fa5f5b196441bc70acfc1128c08
+      internalID: 1513633356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_2
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 813
+        width: 97
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea89197dbbb554646a95bcc696db3abd
+      internalID: 406007818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_3
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 815
+        width: 7
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4859084ff3ee5b45b9c8455ab914b34
+      internalID: 2086408070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_4
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 814
+        width: 7
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd832780127b10542a0fda999085073d
+      internalID: -822486979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_5
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 815
+        width: 7
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdd6e8558333c1149aa415983741c48e
+      internalID: 1123487357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_7
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 845
+        width: 102
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6e5a37c73959724c9004ffb88ffafbb
+      internalID: -973312868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 814
+        width: 33
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f5f0fb6c9cecae4184786fcc3d3b844
+      internalID: -102162577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_9
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 814
+        width: 102
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b9943ad2fac9a645ad8f298a74a9640
+      internalID: 1471862606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_10
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 781
+        width: 32
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e2debc1c9a88df409edd7d29f50cff3
+      internalID: -2051726826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_11
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 782
+        width: 102
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fef8a7b392d205848937691b93f5094b
+      internalID: 99850475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_12
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 750
+        width: 96
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9823b7e922a1e5e4b90b340b974716da
+      internalID: 345709513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_13
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 763
+        width: 96
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b6adcb0a4ea33245a755753077c8078
+      internalID: -217791897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_14
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 751
+        width: 96
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dbeb49fffceee3408df07ea08bb32b3
+      internalID: -297628152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_15
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 749
+        width: 33
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 922d917bacf7dc3489abba4d17b0910b
+      internalID: -1230847298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_16
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 720
+        width: 96
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d554a96ff6f05ee4d8571db108d811fe
+      internalID: -393830217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_17
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 719
+        width: 96
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeedb7645a6aca940879229318dc45ae
+      internalID: -2140536098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_18
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 686
+        width: 64
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02167105dbb996949aa3d5a11fb5dc9f
+      internalID: 1354415329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_19
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 686
+        width: 64
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c63b24ac80210af4980ab5050dc6b207
+      internalID: -1911209767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_20
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 686
+        width: 96
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2339a95ac1341a9449d0faba2a3edbfa
+      internalID: 549021216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_22
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 654
+        width: 64
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 214244b0d31cf6f44a38574f40a2eac5
+      internalID: 1758055175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_23
+      rect:
+        serializedVersion: 2
+        x: 993
+        y: 654
+        width: 64
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9376912a20a6ca041bbe0bf702c2b60b
+      internalID: -835232094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_25
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 622
+        width: 33
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1023acdea3152414289ca6f0ffe640e5
+      internalID: 96758730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_26
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 622
+        width: 32
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46ad34b4104c8a84db84e1e96050c0c5
+      internalID: 111040570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_27
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 622
+        width: 32
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbdc8dab4e312d6448a80de3e2c4efc4
+      internalID: -950326889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_28
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 622
+        width: 96
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e45de47114f496d4080ef4955a892aed
+      internalID: -2137853462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_31
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 558
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d845a77250147fc4d8af87c11cc8ba89
+      internalID: -552940996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_32
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 558
+        width: 64
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8379313012ce4a14bba8c6ca042f26be
+      internalID: -612405178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_33
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 526
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80b900292889f0d40a4183d8412c19d2
+      internalID: 1631909198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_34
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 558
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3265f4913e12f26458cf241f85383359
+      internalID: -345212859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_35
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 558
+        width: 85
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eba1cc6013455ce47952fa281308fedb
+      internalID: 801655485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_36
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 558
+        width: 64
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b3b241a7eec8d4459c000b12e7e2512
+      internalID: -732256007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_37
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 558
+        width: 64
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cd97a222603c1249a22b9c5e3ab3e93
+      internalID: 1307417297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_38
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 494
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 433014b74c64450438e2cedd4763a337
+      internalID: -545228045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_39
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 494
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1079930a0bbda3d47aab564e9851e216
+      internalID: -277445969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_40
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 495
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d08251141b6fbad4e973709285a9a2fb
+      internalID: 1941010102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_41
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 494
+        width: 32
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02fec560b338e9a48901d30c1d97ccee
+      internalID: 81951306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_42
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 494
+        width: 32
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0942e4532f9a5f84984fa47c87bcd9b6
+      internalID: 656683503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_43
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 494
+        width: 32
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32ab1dcd4a7b563428728fe3c51cb784
+      internalID: -228863203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_44
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 494
+        width: 32
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0181bd9fe4a3f9499c812b889710a7d
+      internalID: 897421561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_45
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 494
+        width: 32
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f0ed774e64a2fd45ab14491a3c90bd3
+      internalID: 1800879226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_46
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 494
+        width: 32
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3adf40bd5b150d4588f5e7a1129b928
+      internalID: 1746918115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_47
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 430
+        width: 68
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d557b5a5d97e7e94bb1e0c461267ea8e
+      internalID: -1711952510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_48
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 430
+        width: 224
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1062c49024b0ada4ba2658ad9db322f6
+      internalID: 599389265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_49
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 430
+        width: 32
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7293c75963670ee4faf2c5d0eb1d7573
+      internalID: 334482864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_50
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 430
+        width: 32
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b3a8f455a79e884d822d615aad2ccf7
+      internalID: 1605405696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_51
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 430
+        width: 32
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec85e9b1e46baa846a9a1c441fda4107
+      internalID: 439232663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_52
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 366
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbc9a82ccc1c8944ca7301eb8931f536
+      internalID: -482213183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_53
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 366
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96016572f5c981b44b33b36cc5230f84
+      internalID: 1246617442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_54
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 366
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f98b3601f67f1af43b73994cebb9d470
+      internalID: -46798003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_55
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 366
+        width: 32
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cdbc170885462a4a87e0cb5e1c390dc
+      internalID: -1496729239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_56
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 366
+        width: 32
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ae5a22394c56094e87c36c57299403e
+      internalID: -666917271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_57
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 366
+        width: 32
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dc632a7320e8984f94b5e109e39b188
+      internalID: -1241445962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_58
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 366
+        width: 32
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 530f9ea86aed34b48b55d8981dc3fcf0
+      internalID: 726955558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_59
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 366
+        width: 32
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b17d4f03da01128489b6ead608696294
+      internalID: 512251050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_60
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 366
+        width: 32
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7b322bd181e8d64e8da2c76376191b5
+      internalID: -1541631481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_61
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 302
+        width: 7
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 649f39fa39825e04faca9030a927322c
+      internalID: -1105400636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_62
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 311
+        width: 5
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0fb2e1bccf1cc6469efe6cc98995b55
+      internalID: -1578801593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_63
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 311
+        width: 5
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1df2fffa68b562a4084d2e997683bb8d
+      internalID: -2097669708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_64
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 310
+        width: 5
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f85e3f9461f848a4188dec44cf34b0cf
+      internalID: 1950865004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_65
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 310
+        width: 5
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 700cc946c8221a84a9c012fe74830acd
+      internalID: 739258746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_66
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 312
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80b95cadf87fc784f80e826d0b2f957e
+      internalID: -337587308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_67
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 308
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e23d6ae53b89923429c9ad0161374730
+      internalID: 1052233089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_68
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 310
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4504b80a7981bef41b49b1e38f3514f7
+      internalID: -727389386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_69
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 310
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c519d7ee6744e814b95ffda53adf8a78
+      internalID: -678467114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_70
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 309
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d2157e367eef114b9c7dafc7d94e85d
+      internalID: 1395706157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_71
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 309
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cb2fa293a4c5c74d88c608e8dcee07f
+      internalID: 418065277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_72
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 309
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea414aaa985b13e4c8f728b402b6801f
+      internalID: -171017485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_73
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 302
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 714850d10131ee14188b90d2cb3d621b
+      internalID: -1347624998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_74
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 302
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 271bd2bcb540b25478a6408c176a6838
+      internalID: 372586723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_75
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 302
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4db8282ca8078243ba64908a23e5b55
+      internalID: -857144050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_76
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 302
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c817d5a165367b2498ad6f57927549cc
+      internalID: -1164603802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_77
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 302
+        width: 33
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b68ba4feae048c4984015ebc6397a6d
+      internalID: -1142860055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_80
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 270
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 880b3e8c251292d49947cc485118828f
+      internalID: -1681612166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_81
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 270
+        width: 4
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 973bb364a0828e64bb38c78cd2535674
+      internalID: -319283755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_83
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 280
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1fde8b296ae03e41b918e35fad853ad
+      internalID: -1036101752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_84
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 280
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc68541b69d2aed4a87422c0ea4d3427
+      internalID: -2093320181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_85
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 270
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c69d0f10dfab3234887f5fc4622719dc
+      internalID: 1076812135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_86
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 270
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b2553f247b7ee44997eb5d3df15ca19
+      internalID: 1794062050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_87
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 270
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0894d30cfb3e0e4bb1fa22e26a701db
+      internalID: 1338688640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_88
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 270
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d8c130fc106a144fbf156322cb87f30
+      internalID: -744398574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_89
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 270
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67a5e1d2a3a54c84e9fc1a219b7f0499
+      internalID: -1197574693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_90
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 272
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ed8a9bf69fd8d944854c734a923d2a6
+      internalID: -750536152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_91
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 270
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 321d37f5c4753f74abb13c1e0bf6441b
+      internalID: 796897537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_93
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 270
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 533d0d191c506364f9df83b622461c3a
+      internalID: 1339849793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_94
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 270
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c037d75f3bee0540a7a043094b0e657
+      internalID: -1532152789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_96
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 270
+        width: 12
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78318c36f035b2542b3e1252fcfd2497
+      internalID: 1240975537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_97
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 270
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fdef813cc8c8af4c9cf8238c8c64def
+      internalID: -74139103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_98
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 238
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1a05ef61e0d2ac4f9e61707809be5c5
+      internalID: 1053734326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_99
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 238
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c8dfbf114f347f49a014241ff66c3e5
+      internalID: -2093218381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_100
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 238
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 696e07513271c20448031dfbc0a5d82e
+      internalID: -604350603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_101
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 238
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aed88b1cfb1536244946f939e46df7cd
+      internalID: -550726649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_102
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 238
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62f8e4bf1ad6c8f47b42dc9829aa8b2b
+      internalID: 408734774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_103
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 238
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffd145ea0f27c274eb150a16beb07cc1
+      internalID: -528666962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_104
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 238
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 659074738577bf4468aa2eda258c662b
+      internalID: 352200314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_105
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 206
+        width: 7
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bda722e064f05244bfdca0d32434eb0
+      internalID: -163710510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_106
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 218
+        width: 5
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b93f57c8212f554ea17966f82eb5e7b
+      internalID: -285955365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_107
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 218
+        width: 5
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 925b466c184a5bc4fa2b45f7989c8c79
+      internalID: -285937754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_108
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 217
+        width: 5
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed741e56b3a3dc74798f682a402d4539
+      internalID: -647299854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_109
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 217
+        width: 5
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf8dfe30f32f98a41b4ffac2b54fa6be
+      internalID: -1726174938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_110
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 219
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ee7ddeab1801ff408662f5e195a01b1
+      internalID: 231462235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_111
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 215
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8d46765afdf6c84996a3c05a5cca3e7
+      internalID: 1225064919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_112
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 217
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0387d45be1a44374da4319404d47a26f
+      internalID: 633494955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_113
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 217
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b50f6fe0f5c701142a76a3be99df433c
+      internalID: -1244318493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_114
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 216
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8084a03e9f9c1f489964404d030f9f7
+      internalID: 243180448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_115
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 216
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3a9aa472fa69a04992d3f50d24e0495
+      internalID: 108323944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_116
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 214
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c479e902483a9f24d929ab8602b963db
+      internalID: -1991186687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_117
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 206
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c21ed0a20110244d821edbcb23b0daf
+      internalID: 1348696512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_120
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 187
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79d62f737c0314941b6cbc5fbdd3562c
+      internalID: -704422734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_121
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 187
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01b57951c7677c34eb5e094b464574e9
+      internalID: 1429395838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_122
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 174
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6133a90e1d0c3648ba1c513cfaf7d72
+      internalID: -1688724675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_123
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 174
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5daed12328589ef4ca37778c801b41c4
+      internalID: 127492695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_124
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 174
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e072ecf7fed52514dbf6606ff508296d
+      internalID: 980814087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_125
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 174
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0d7ed15b4a19664b84f70868ac81bcb
+      internalID: 1019314581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_126
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 174
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10b85d9f059f4ff488bf2f7d22214047
+      internalID: 2096679391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_127
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 174
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74bcbcc075f56e24983d2afef2224af1
+      internalID: -1471795714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_128
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 174
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f4488f4bc09a3e46a05d889b58972bd
+      internalID: -361239436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_129
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 174
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af349ce19aba3a041b4438f53d5c9bca
+      internalID: 1196486981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_130
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 174
+        width: 4
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aa893fcdf1599f46be7047aa487c7f6
+      internalID: -770102440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_133
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 174
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 525917a5673cc0b47bd0568da0064350
+      internalID: -1946657690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_134
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 174
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68db62d3a9d0fb2459a347ad595c476b
+      internalID: -1716958072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_135
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 174
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a4fb23f4f6d7254fae8938dd98ccbd6
+      internalID: 592087576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_136
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 174
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 413d39070788a944cbca226af6d6e07e
+      internalID: -1447807977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_137
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 174
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d3c84648d3f85e4abacc1c9c3955b84
+      internalID: -853622952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_138
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 174
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed2fa9780d150db47847760e8caa0d1c
+      internalID: -727294195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_139
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 174
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 096d9ee13d5f33044ad2d4f9685f5c8b
+      internalID: -344431455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_142
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 174
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce25bfed87d80d246806ecda957a3e4c
+      internalID: 582882515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_143
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 46
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9c7240521660a44f9110f8c5f7ab3ea
+      internalID: 1548561567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_144
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 46
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2817414e958e139468ea78541ca7e6b3
+      internalID: 2105426988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_145
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 110
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86ea9eb3f1a43544882187a6efcf2f49
+      internalID: -735232391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_146
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 110
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f9a828d452b4744b82eea76982580c2
+      internalID: 1894469071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_147
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 110
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 550a9d629dd369b4e83eaa2f5982f7b4
+      internalID: 1284639035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_148
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 136
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6aad66ee2e65794784848206bd634ee
+      internalID: 365633535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_149
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 136
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b275e8755b885c1469c09d9ab9bceb06
+      internalID: -1410647185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_150
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 110
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc98df4fcd8314b48932785fedfa7cbb
+      internalID: -589807925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_151
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 110
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e484e33321f92474fbaab71f1b7c1d32
+      internalID: -1288720610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_152
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 110
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e75c2d8906fb824cae34e9e211dd54f
+      internalID: 1092900678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_153
+      rect:
+        serializedVersion: 2
+        x: 934
+        y: 110
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b4bd4bd48896f241868969bbf8d4515
+      internalID: -738945744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_154
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 110
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f895a5cb008fc0449dda55f0ffed323
+      internalID: -975444677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_155
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 110
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27d856c84090a0544ab773d7973a70a3
+      internalID: 1714047699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_156
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 46
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 682cf472834ad864fbc2b799deb8a7d4
+      internalID: -78469472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_157
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 46
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a67c17cfae6b0694388996d8b26c5519
+      internalID: -1670529340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_158
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 72
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e6f13b73cd082048998899672ae0431
+      internalID: 2023299689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_159
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 72
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 947b0b8a42e19d84cbfce64a778d8453
+      internalID: 1238557594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_160
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 46
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 824c90dbb9d70ec49b0d36ca18caa826
+      internalID: 774314615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_161
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 46
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be62e198b62315f479bdf6fcbbc95a5e
+      internalID: -2024369796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_162
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 846
+        width: 12
+        height: 2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c206fe6bbdd3bf8438ce72699306b921
+      internalID: -1809393567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_163
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 814
+        width: 12
+        height: 2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f02f15e075c97e745b266e483b7303ad
+      internalID: 87970766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_164
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 782
+        width: 12
+        height: 2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fded4e444a7c9b44ea88a0ca1b705982
+      internalID: 1563268816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_165
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 750
+        width: 12
+        height: 2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e70dfbc0dc53542438717d3c40f5c0d7
+      internalID: 378795448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_6
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 814
+        width: 7
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19a487d25f3c09b478c71fcba64b6167
+      internalID: -1844118359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_166
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 750
+        width: 32
+        height: 2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 208e732c113b15644bef5242220f0e1d
+      internalID: 1157790941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_167
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 718
+        width: 32
+        height: 2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcf80de9c60813240a726201b402c009
+      internalID: 383717798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_168
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 718
+        width: 2
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f140c931f9fcda48b405adfdeebd5a2
+      internalID: 1937556984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_169
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 718
+        width: 2
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2fbbfd07c999d340ad8f9499e3b6e6f
+      internalID: 827294753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_170
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 846
+        width: 64
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6c7299d30100ec42b9986e7a2e29feb
+      internalID: 1215144423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_171
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 814
+        width: 65
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99e15e216fcafb24e99012815abd13d1
+      internalID: 834216272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_172
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 814
+        width: 1
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 763eb18b54942044e9255832aca8ddd3
+      internalID: -160322862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_173
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 814
+        width: 1
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef79e15cedad55144a7839d0bc3c9db0
+      internalID: 66481287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_21
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 636
+        width: 65
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84e844cfd1b5c394a89b013ca34fd098
+      internalID: -58621371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_24
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 173
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48150f4c7f916224aa5789a70419bc7a
+      internalID: 2122702889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_29
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 219
+        width: 13
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1da2aa10cdd55ab45bec2e0cd14dab0a
+      internalID: 1943093381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_30
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 174
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11d2f0f94e5c51f42bb0d23c69c23282
+      internalID: 2128629117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_118
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 110
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44d6090def251cd4ca88e6c8d9944170
+      internalID: 311081547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_119
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 46
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f43c01760374ef748bff57499894cd31
+      internalID: 647486826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_131
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 46
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fd05780e9c60ec43a32232f488d2725
+      internalID: -1892998183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_132
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 314
+        width: 13
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8b5f51226250134aa4f888f05c76a68
+      internalID: -1108966330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi_ui_01_92
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 270
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa39b967473405944b2fe577c7af25e5
+      internalID: -1592003473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
+    customData: 
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
@@ -107,16 +3849,187 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      scifi_ui_01_0: -16488558
+      scifi_ui_01_1: 1513633356
+      scifi_ui_01_10: -2051726826
+      scifi_ui_01_100: -604350603
+      scifi_ui_01_101: -550726649
+      scifi_ui_01_102: 408734774
+      scifi_ui_01_103: -528666962
+      scifi_ui_01_104: 352200314
+      scifi_ui_01_105: -163710510
+      scifi_ui_01_106: -285955365
+      scifi_ui_01_107: -285937754
+      scifi_ui_01_108: -647299854
+      scifi_ui_01_109: -1726174938
+      scifi_ui_01_11: 99850475
+      scifi_ui_01_110: 231462235
+      scifi_ui_01_111: 1225064919
+      scifi_ui_01_112: 633494955
+      scifi_ui_01_113: -1244318493
+      scifi_ui_01_114: 243180448
+      scifi_ui_01_115: 108323944
+      scifi_ui_01_116: -1991186687
+      scifi_ui_01_117: 1348696512
+      scifi_ui_01_118: 311081547
+      scifi_ui_01_119: 647486826
+      scifi_ui_01_12: 345709513
+      scifi_ui_01_120: -704422734
+      scifi_ui_01_121: 1429395838
+      scifi_ui_01_122: -1688724675
+      scifi_ui_01_123: 127492695
+      scifi_ui_01_124: 980814087
+      scifi_ui_01_125: 1019314581
+      scifi_ui_01_126: 2096679391
+      scifi_ui_01_127: -1471795714
+      scifi_ui_01_128: -361239436
+      scifi_ui_01_129: 1196486981
+      scifi_ui_01_13: -217791897
+      scifi_ui_01_130: -770102440
+      scifi_ui_01_131: -1892998183
+      scifi_ui_01_132: -1108966330
+      scifi_ui_01_133: -1946657690
+      scifi_ui_01_134: -1716958072
+      scifi_ui_01_135: 592087576
+      scifi_ui_01_136: -1447807977
+      scifi_ui_01_137: -853622952
+      scifi_ui_01_138: -727294195
+      scifi_ui_01_139: -344431455
+      scifi_ui_01_14: -297628152
+      scifi_ui_01_140: 1561862398
+      scifi_ui_01_141: -824400067
+      scifi_ui_01_142: 582882515
+      scifi_ui_01_143: 1548561567
+      scifi_ui_01_144: 2105426988
+      scifi_ui_01_145: -735232391
+      scifi_ui_01_146: 1894469071
+      scifi_ui_01_147: 1284639035
+      scifi_ui_01_148: 365633535
+      scifi_ui_01_149: -1410647185
+      scifi_ui_01_15: -1230847298
+      scifi_ui_01_150: -589807925
+      scifi_ui_01_151: -1288720610
+      scifi_ui_01_152: 1092900678
+      scifi_ui_01_153: -738945744
+      scifi_ui_01_154: -975444677
+      scifi_ui_01_155: 1714047699
+      scifi_ui_01_156: -78469472
+      scifi_ui_01_157: -1670529340
+      scifi_ui_01_158: 2023299689
+      scifi_ui_01_159: 1238557594
+      scifi_ui_01_16: -393830217
+      scifi_ui_01_160: 774314615
+      scifi_ui_01_161: -2024369796
+      scifi_ui_01_162: -1809393567
+      scifi_ui_01_163: 87970766
+      scifi_ui_01_164: 1563268816
+      scifi_ui_01_165: 378795448
+      scifi_ui_01_166: 1157790941
+      scifi_ui_01_167: 383717798
+      scifi_ui_01_168: 1937556984
+      scifi_ui_01_169: 827294753
+      scifi_ui_01_17: -2140536098
+      scifi_ui_01_170: 1215144423
+      scifi_ui_01_171: 834216272
+      scifi_ui_01_172: -160322862
+      scifi_ui_01_173: 66481287
+      scifi_ui_01_18: 1354415329
+      scifi_ui_01_19: -1911209767
+      scifi_ui_01_2: 406007818
+      scifi_ui_01_20: 549021216
+      scifi_ui_01_21: -58621371
+      scifi_ui_01_22: 1758055175
+      scifi_ui_01_23: -835232094
+      scifi_ui_01_24: 2122702889
+      scifi_ui_01_25: 96758730
+      scifi_ui_01_26: 111040570
+      scifi_ui_01_27: -950326889
+      scifi_ui_01_28: -2137853462
+      scifi_ui_01_29: 1943093381
+      scifi_ui_01_3: 2086408070
+      scifi_ui_01_30: 2128629117
+      scifi_ui_01_31: -552940996
+      scifi_ui_01_32: -612405178
+      scifi_ui_01_33: 1631909198
+      scifi_ui_01_34: -345212859
+      scifi_ui_01_35: 801655485
+      scifi_ui_01_36: -732256007
+      scifi_ui_01_37: 1307417297
+      scifi_ui_01_38: -545228045
+      scifi_ui_01_39: -277445969
+      scifi_ui_01_4: -822486979
+      scifi_ui_01_40: 1941010102
+      scifi_ui_01_41: 81951306
+      scifi_ui_01_42: 656683503
+      scifi_ui_01_43: -228863203
+      scifi_ui_01_44: 897421561
+      scifi_ui_01_45: 1800879226
+      scifi_ui_01_46: 1746918115
+      scifi_ui_01_47: -1711952510
+      scifi_ui_01_48: 599389265
+      scifi_ui_01_49: 334482864
+      scifi_ui_01_5: 1123487357
+      scifi_ui_01_50: 1605405696
+      scifi_ui_01_51: 439232663
+      scifi_ui_01_52: -482213183
+      scifi_ui_01_53: 1246617442
+      scifi_ui_01_54: -46798003
+      scifi_ui_01_55: -1496729239
+      scifi_ui_01_56: -666917271
+      scifi_ui_01_57: -1241445962
+      scifi_ui_01_58: 726955558
+      scifi_ui_01_59: 512251050
+      scifi_ui_01_6: -1844118359
+      scifi_ui_01_60: -1541631481
+      scifi_ui_01_61: -1105400636
+      scifi_ui_01_62: -1578801593
+      scifi_ui_01_63: -2097669708
+      scifi_ui_01_64: 1950865004
+      scifi_ui_01_65: 739258746
+      scifi_ui_01_66: -337587308
+      scifi_ui_01_67: 1052233089
+      scifi_ui_01_68: -727389386
+      scifi_ui_01_69: -678467114
+      scifi_ui_01_7: -973312868
+      scifi_ui_01_70: 1395706157
+      scifi_ui_01_71: 418065277
+      scifi_ui_01_72: -171017485
+      scifi_ui_01_73: -1347624998
+      scifi_ui_01_74: 372586723
+      scifi_ui_01_75: -857144050
+      scifi_ui_01_76: -1164603802
+      scifi_ui_01_77: -1142860055
+      scifi_ui_01_78: -1608049767
+      scifi_ui_01_79: 246616844
+      scifi_ui_01_8: -102162577
+      scifi_ui_01_80: -1681612166
+      scifi_ui_01_81: -319283755
+      scifi_ui_01_82: 358927473
+      scifi_ui_01_83: -1036101752
+      scifi_ui_01_84: -2093320181
+      scifi_ui_01_85: 1076812135
+      scifi_ui_01_86: 1794062050
+      scifi_ui_01_87: 1338688640
+      scifi_ui_01_88: -744398574
+      scifi_ui_01_89: -1197574693
+      scifi_ui_01_9: 1471862606
+      scifi_ui_01_90: -750536152
+      scifi_ui_01_91: 796897537
+      scifi_ui_01_92: -1592003473
+      scifi_ui_01_93: 1339849793
+      scifi_ui_01_94: -1532152789
+      scifi_ui_01_95: -1429715730
+      scifi_ui_01_96: 1240975537
+      scifi_ui_01_97: -74139103
+      scifi_ui_01_98: 1053734326
+      scifi_ui_01_99: -2093218381
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 170207
-  packageName: Scifi Game UI
-  packageVersion: 1.0
-  assetPath: Assets/Scifi UI/Sprite/scifi_ui_01.png
-  uploadId: 371977

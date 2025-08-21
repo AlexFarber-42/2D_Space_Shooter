@@ -47,8 +47,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93fd386e7af96544392ffe561228a655, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
-  projectileSpeed: 2
-  lifeTime: 2
+  projectileSpeed: 6
+  lifeTime: 3
   damage: 1
 --- !u!212 &8240420973316904345
 SpriteRenderer:
