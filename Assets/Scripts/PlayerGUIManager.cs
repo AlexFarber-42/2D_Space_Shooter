@@ -56,6 +56,12 @@ public class PlayerGUIManager : MonoBehaviour
             Destroy(healthBar.GetChild(0).gameObject);
     }
 
+    public void IncreaseHealthBar(int number)
+    {
+        for (int i = 0; i < number; ++i)
+            Instantiate(healthPoint, healthBar);
+    }
+
     public void UpdateScore()
     {
         scoreTracker = ScoreManager.Score;

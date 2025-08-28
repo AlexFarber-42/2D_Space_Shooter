@@ -1,11 +1,11 @@
 using System;
-using System.Collections;
 using UnityEngine;
 
 public class Enemy : Entity
 {
     [Header("Enemy Properties")]
     [SerializeField] private int scoreValue = 1;
+    [SerializeField] private Drop[] drops;
 
     private Transform[] wavePoints;
     private Transform currentPoint;
@@ -67,9 +67,25 @@ public class Enemy : Entity
         if (health <= 0)
         {
             ScoreManager.IncreaseScore(scoreValue);
+            TryDropItem();
 
-            // Handle enemy death (e.g., play animation, point calculations, etc.)
+            // TODO ---> Handle enemy death via effect like an explosion of bug guts
             Destroy(gameObject);
+        }
+    }
+
+    private void TryDropItem()
+    {
+        foreach (Drop drop in drops)
+        {
+            int roll = UnityEngine.Random.Range(1, 101);
+
+            // Drop the item
+            if (roll <= drop.chance)
+            {
+                Instantiate(drop.pickupPrefab, transform.position, Quaternion.identity);
+                break;
+            }
         }
     }
 

@@ -63,8 +63,6 @@ public class Player : Entity
         rb.MovePosition(rb.position + moveSpeed * Time.deltaTime * movementDir);
     }
 
-    
-
     public override void Damage(int damage)
     {
         base.Damage(damage);
@@ -78,12 +76,39 @@ public class Player : Entity
         }
     }
 
+    public void Heal(int amount)
+    {
+        int healAmount = (health + amount) > maxHealth ? (maxHealth - health) : amount;
+        
+        if (healAmount <= 0)
+            return;
+
+        health += healAmount;
+        PlayerGUIManager.Instance.IncreaseHealthBar(healAmount);
+    }
+
+    private void UpdateProjectile(GameObject newProj)
+    {
+
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.TryGetComponent(out Projectile proj) && proj.IsHostileProjectile)
+        GameObject colObj = collision.gameObject;
+
+        if (colObj.TryGetComponent(out Projectile proj) && proj.IsHostileProjectile)
         {
             Damage(proj.Damage);
-            Destroy(proj.gameObject);
+            Destroy(colObj);
+        }
+        else if (colObj.TryGetComponent(out Pickup pickup))
+        {
+            if (pickup is Powerup powerup)
+                UpdateProjectile(powerup.RetrieveProjData());
+            else
+                pickup.ActivatePickup(this);
+
+            Destroy(colObj);
         }
     }
 }
