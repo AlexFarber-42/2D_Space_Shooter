@@ -6,11 +6,19 @@ public class Enemy : Entity
     [Header("Enemy Properties")]
     [SerializeField] private int scoreValue = 1;
     [SerializeField] private Drop[] drops;
+    [SerializeField] private int contactDmg = 1;
+    [SerializeField] private bool explodesOnContact = false;
 
     private Transform[] wavePoints;
     private Transform currentPoint;
     private int index;
     private bool beginPathTraversal = false;
+
+    // TODO ---> Create a different approach that includes exploders
+    public int ContactDamage
+    {
+        get => contactDmg;
+    }
 
     public void SetPath(Transform[] path)
     {
@@ -20,7 +28,7 @@ public class Enemy : Entity
         currentPoint        = wavePoints[index];
         beginPathTraversal  = true;
         
-        if (projectile != null)
+        if (startingProj != null)
             StartCoroutine(Fire(true));
     }
 

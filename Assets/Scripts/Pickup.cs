@@ -47,9 +47,13 @@ public class Pickup : MonoBehaviour
             case PickupType.Money:
                 BankSystem.AddMoney(value);
                 MoneyTracker.Instance.UpdateString();
+
+                ScoreManager.IncreaseScore(value * 2);
                 break;
             case PickupType.Health:
                 playerRef.Heal(value);
+
+                ScoreManager.IncreaseScore(value * 10);
                 break;
             case PickupType.Charge:
                 // TODO ---> Add functionality to the bar underneath the healthbar for special weapons and shieldings

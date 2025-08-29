@@ -7,7 +7,8 @@ public class Entity : MonoBehaviour
     [SerializeField] protected int health = 3;
     [SerializeField] protected float moveSpeed = 2f;
     [SerializeField] protected float fireRate = 2f;
-    [SerializeField] protected GameObject projectile;
+
+    [SerializeField] protected GameObject startingProj;
 
     public virtual void Damage(int damage)
     {
@@ -19,7 +20,7 @@ public class Entity : MonoBehaviour
         while (true)
         {
             // TODO ---> Add Pooling
-            GameObject projInstance = Instantiate(projectile, transform.position, projectile.transform.rotation);
+            GameObject projInstance = Instantiate(startingProj, transform.position, startingProj.transform.rotation);
             Projectile proj = projInstance.GetComponent<Projectile>();
 
             proj.IsHostileProjectile = isHostile;

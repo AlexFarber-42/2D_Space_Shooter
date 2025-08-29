@@ -7,6 +7,9 @@ public class Player : Entity
     [Header("Player Settings")]
     [SerializeField] private int maxHealth = 3;
 
+    [Header("Debug/Cheat Settings")]
+    [SerializeField] private bool isInvincible = false;
+
     public InputActionAsset PlayerInput;
 
     private InputAction inputMovement;
@@ -65,6 +68,10 @@ public class Player : Entity
 
     public override void Damage(int damage)
     {
+        // Cheat for no damage
+        if (isInvincible)
+            return;
+
         base.Damage(damage);
         PlayerGUIManager.Instance.DecreaseHealthBar(damage);
 
@@ -108,6 +115,19 @@ public class Player : Entity
             else
                 pickup.ActivatePickup(this);
 
+            Destroy(colObj);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        GameObject colObj = collision.gameObject;
+
+        if (colObj.TryGetComponent(out Enemy enemyComp))
+        {
+            // TODO ---> Call a method with a return for an int for the damage itself so
+            // explosions and effects are cleaner and within the enemy comp itself
+            Damage(enemyComp.ContactDamage);
             Destroy(colObj);
         }
     }
