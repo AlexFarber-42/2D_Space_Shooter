@@ -115,7 +115,5 @@ public class DrawerGUIMovement : MonoBehaviour
     {
         inProcess       = true;
         isPullingOut    = !isPullingOut;
-
-        Debug.Log(isPullingOut);
     }
 }

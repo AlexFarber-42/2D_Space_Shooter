@@ -17,9 +17,8 @@ MonoBehaviour:
     enemies:
     - {fileID: 968305722208505283, guid: df78e9198732acc4097c48a186d0d263, type: 3}
     - {fileID: 968305722208505283, guid: df78e9198732acc4097c48a186d0d263, type: 3}
-    numberOfEnemies: 020000000200000002000000
+    numberOfEnemies: 0200000002000000
     spawnDelay:
-    - 0.25
     - 0.25
     - 0.25
   pathway: {fileID: 2779955833148553276, guid: a8326a9ecc17eb64697d5925f1ba4bb4, type: 3}

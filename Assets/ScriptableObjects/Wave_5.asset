@@ -10,13 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 202ecd54c3c56c5409504c2bb3b3aff4, type: 3}
-  m_Name: Wave_1
+  m_Name: Wave_5
   m_EditorClassIdentifier: Assembly-CSharp::WaveSO
   waves:
   - waveName: Wave
     enemies:
+    - {fileID: 5438829479670690293, guid: b559b111a90b33046885cb8c3c8b1bb1, type: 3}
     - {fileID: 2511681306097961928, guid: f1c23a474d3452e43a6b57285fda7568, type: 3}
-    numberOfEnemies: 08000000
+    - {fileID: 968305722208505283, guid: df78e9198732acc4097c48a186d0d263, type: 3}
+    numberOfEnemies: 050000000500000005000000
     spawnDelay:
+    - 0.25
+    - 0.25
     - 0.25
   pathway: {fileID: 6714700722287226529, guid: 87a5486d3ae524942a0b2f8318ef1416, type: 3}

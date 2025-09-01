@@ -19,12 +19,14 @@ public class Player : Entity
 
     private Rigidbody2D rb;
     private Coroutine isFiring = null;
+    private GameObject currentProjectile;
 
     public int MaxHealth { get => maxHealth; }
 
     private void OnEnable()
     {
         PlayerInput.FindActionMap("Player").Enable();
+        currentProjectile = startingProj;
     }
 
     private void OnDisable()
@@ -48,7 +50,7 @@ public class Player : Entity
 
         // Firing Logic
         if (inputFire.IsPressed() && isFiring is null)
-            isFiring = StartCoroutine(Fire(false));
+            isFiring = StartCoroutine(Fire());
         else if (!inputFire.IsPressed() && isFiring is not null)
         {
             StopCoroutine(isFiring);
@@ -64,6 +66,24 @@ public class Player : Entity
     private void PlayerMovement()
     {
         rb.MovePosition(rb.position + moveSpeed * Time.deltaTime * movementDir);
+    }
+
+    protected override IEnumerator Fire()
+    {
+        while (true)
+        {
+            // TODO ---> Add Pooling
+            GameObject projInstance = Instantiate(currentProjectile, transform.position, currentProjectile.transform.rotation);
+            Projectile proj = projInstance.GetComponent<Projectile>();
+
+            // TODO ---> Will be unique in modifying the projectile based on the player's upgrades or the projectile itself
+
+            proj.IsHostileProjectile = false;
+            proj.FireProjectile();
+            ++projs_Fired; // TODO ---> This is different then the other version in Fire as a data collection tool to determine a player's accuracy at the end of a round
+
+            yield return new WaitForSeconds(fireRate);
+        }
     }
 
     public override void Damage(int damage)
@@ -95,9 +115,7 @@ public class Player : Entity
     }
 
     private void UpdateProjectile(GameObject newProj)
-    {
-
-    }
+        => currentProjectile = newProj;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

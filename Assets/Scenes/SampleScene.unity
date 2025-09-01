@@ -375,9 +375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WaveManager
   levelWaves:
-  - {fileID: 11400000, guid: 0d99231d23431e9499936d03d9c209b9, type: 2}
-  - {fileID: 11400000, guid: 1d52975b22dcb954ca6d74044cd22108, type: 2}
-  - {fileID: 11400000, guid: 3921e146a11a09b468d007a05f5b997b, type: 2}
+  - {fileID: 11400000, guid: 8f39825e39f0288488a417362b99817e, type: 2}
   enemyPool: {fileID: 1507444243}
   minArea: {x: -8, y: -1, z: 0}
   maxArea: {x: 8, y: 4, z: 0}
@@ -2677,9 +2675,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
   health: 1
-  moveSpeed: 4.5
+  moveSpeed: 6
   fireRate: 0.2
-  startingProj: {fileID: 0}
+  startingProj: {fileID: 6637855890290191017, guid: cc1d1337baee50043b2ba6b128dd6382, type: 3}
   maxHealth: 3
   isInvincible: 1
   PlayerInput: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

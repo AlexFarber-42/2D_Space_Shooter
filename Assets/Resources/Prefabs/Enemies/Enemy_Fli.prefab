@@ -48,10 +48,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   health: 1
-  moveSpeed: 5
-  fireRate: 1.75
-  startingProj: {fileID: 4055161308557831543, guid: 16fe5dad34533b54b875f5143459150f, type: 3}
-  scoreValue: 1
+  moveSpeed: 3.5
+  fireRate: 0
+  startingProj: {fileID: 0}
+  scoreValue: 5
   drops:
   - pickupPrefab: {fileID: 2366921362289610274, guid: 8b045a74a551ac146a37c19119d39554, type: 3}
     chance: 25

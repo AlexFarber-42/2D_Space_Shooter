@@ -29,7 +29,7 @@ public class Enemy : Entity
         beginPathTraversal  = true;
         
         if (startingProj != null)
-            StartCoroutine(Fire(true));
+            StartCoroutine(Fire());
     }
 
     private void FollowPath()
@@ -43,7 +43,7 @@ public class Enemy : Entity
         {
             float distance = Vector2.Distance(currentPoint.position, transform.position);
 
-            if (distance > 0 + float.Epsilon)
+            if (distance > 0.01 + float.Epsilon)
                 FollowPath();
             else if (index < wavePoints.Length)
             {
