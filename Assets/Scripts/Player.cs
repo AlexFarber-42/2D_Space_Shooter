@@ -105,7 +105,8 @@ public class Player : Entity
         while (true)
         {
             // TODO ---> Add Pooling
-            GameObject projInstance = Instantiate(currentProjectile, transform.position, transform.rotation);
+            Quaternion startingRot = transform.rotation * currentProjectile.transform.rotation;
+            GameObject projInstance = Instantiate(currentProjectile, transform.position, startingRot);
             Projectile proj = projInstance.GetComponent<Projectile>();
 
             // TODO ---> Will be unique in modifying the projectile based on the player's upgrades or the projectile itself
@@ -147,7 +148,12 @@ public class Player : Entity
     }
 
     private void UpdateProjectile(GameObject newProj)
-        => currentProjectile = newProj;
+    {
+        currentProjectile = newProj;
+
+        // Modify the GUI 
+        PlayerGUIManager.Instance.UpdatePowerup(newProj);
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -161,7 +167,10 @@ public class Player : Entity
         else if (colObj.TryGetComponent(out Pickup pickup))
         {
             if (pickup is Powerup powerup)
+            {
+                ScoreManager.IncreaseScore(100);                // Get 100 points when a power up is acquired
                 UpdateProjectile(powerup.RetrieveProjData());
+            }
             else
                 pickup.ActivatePickup(this);
 

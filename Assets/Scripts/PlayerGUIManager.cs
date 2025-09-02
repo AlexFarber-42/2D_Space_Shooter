@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -34,8 +35,6 @@ public class PlayerGUIManager : MonoBehaviour
     private void Start()
     {
         UpdateScore();
-        powerUpImage.enabled = false;
-
         ResetHealthBar();
     }
 
@@ -72,5 +71,22 @@ public class PlayerGUIManager : MonoBehaviour
     {
         if (ScoreManager.Score != scoreTracker)
             UpdateScore();
+    }
+
+    public void UpdatePowerup(GameObject powerupProj)
+    {
+        if (powerupProj != null)
+        {
+            powerUpImage.sprite = powerupProj.GetComponent<SpriteRenderer>().sprite;
+            powerUpImage.type = Image.Type.Simple;
+            powerUpImage.preserveAspect = true;
+
+            powerUpImage.GetComponent<RectTransform>().sizeDelta = new Vector2(50, 50);
+        }
+        else
+        {
+            powerUpImage.sprite = null; // Square
+            powerUpImage.GetComponent<RectTransform>().sizeDelta = new Vector2(25, 25);
+        }
     }
 }
