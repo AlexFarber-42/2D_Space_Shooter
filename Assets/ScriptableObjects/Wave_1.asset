@@ -16,7 +16,11 @@ MonoBehaviour:
   - waveName: Wave
     enemies:
     - {fileID: 2511681306097961928, guid: f1c23a474d3452e43a6b57285fda7568, type: 3}
-    numberOfEnemies: 08000000
+    - {fileID: 968305722208505283, guid: df78e9198732acc4097c48a186d0d263, type: 3}
+    - {fileID: 5438829479670690293, guid: b559b111a90b33046885cb8c3c8b1bb1, type: 3}
+    numberOfEnemies: 080000000500000002000000
     spawnDelay:
     - 0.25
-  pathway: {fileID: 6714700722287226529, guid: 87a5486d3ae524942a0b2f8318ef1416, type: 3}
+    - 0.3
+    - 0.33
+  pathway: {fileID: 7076599817731089072, guid: 1fd915ff7522e9640b7a2df73eaddba6, type: 3}

@@ -34,7 +34,9 @@ public class Enemy : Entity
 
     private void FollowPath()
     {
-        transform.position = Vector2.MoveTowards(transform.position, currentPoint.position, moveSpeed * Time.deltaTime);
+        Vector3 vecBetween = currentPoint.position - transform.position;
+        transform.SetPositionAndRotation(Vector2.MoveTowards(transform.position, currentPoint.position, moveSpeed * Time.deltaTime), 
+                                         Quaternion.LookRotation(Vector3.forward, moveSpeed * Time.deltaTime * -vecBetween));
     }
 
     private void Update()
