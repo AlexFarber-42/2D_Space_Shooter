@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections;
+using UnityEditor;
+using System;
 
 public class Entity : MonoBehaviour
 {
@@ -14,10 +16,15 @@ public class Entity : MonoBehaviour
 
     [SerializeField] protected GameObject startingProj;
 
+    [Header("Particle Effect Settings")]
+    [SerializeField] protected GameObject[] deathEffects;
+    [SerializeField] protected Vector2 scaleOverride = Vector2.one;
+    [SerializeField] protected Color colorOverride = Color.white;
+
     protected int projs_Fired = 0;
     private float minLimit;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         minLimit = moveSpeed > 10f ? .15f : (moveSpeed > 6f ? .4f : .75f);
     }
@@ -31,7 +38,7 @@ public class Entity : MonoBehaviour
     {
         while (true)
         {
-            float pauseBetweenFire = Random.Range(minLimit, fireRate);
+            float pauseBetweenFire = UnityEngine.Random.Range(minLimit, fireRate);
 
             yield return new WaitForSeconds(pauseBetweenFire);
 
@@ -47,4 +54,6 @@ public class Entity : MonoBehaviour
             ++projs_Fired; // TODO --> To be used as a fun data point for the user to check total projectiles that were fired at them at the end of a round
         }
     }
+
+
 }

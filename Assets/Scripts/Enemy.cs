@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using System.Linq;
 using UnityEngine;
 
 public class Enemy : Entity
@@ -14,10 +16,15 @@ public class Enemy : Entity
     private int index;
     private bool beginPathTraversal = false;
 
-    // TODO ---> Create a different approach that includes exploders
-    public int ContactDamage
+    private GameObject hazardObj;
+
+    protected override void Awake()
     {
-        get => contactDmg;
+        base.Awake();
+
+        // Retrieves the hazard object that activates upon detonation or elimination
+        if (explodesOnContact)
+            hazardObj = transform.GetChild(0).gameObject;
     }
 
     public void SetPath(Transform[] path)
@@ -76,6 +83,30 @@ public class Enemy : Entity
 
         if (health <= 0)
         {
+            try
+            {
+                Vector3 randomRot = new Vector3(0f, 0f, UnityEngine.Random.Range(1f, 360f));
+                GameObject deathEffect = Instantiate(deathEffects[UnityEngine.Random.Range(0, deathEffects.Length)], transform.position, Quaternion.Euler(randomRot));
+
+                if (scaleOverride != Vector2.one)
+                    deathEffect.transform.localScale = scaleOverride;
+                if (colorOverride != Color.white)
+                {
+                    bool coinFlip = UnityEngine.Random.Range(1, 3) is 1;
+
+                    if (coinFlip)
+                        deathEffect.GetComponent<SpriteRenderer>().color = colorOverride;
+                }
+            }
+            catch
+            {
+                Debug.Log($"Bypassing death effect for {name}");
+            }
+
+            // If a hazardous object is detected from this entities corpse, activate it (i.e. boomer flis exploding regardless of contact or not)
+            if (hazardObj != null)
+                TriggerHazard();
+
             ScoreManager.IncreaseScore(scoreValue);
             TryDropItem();
 
@@ -101,10 +132,38 @@ public class Enemy : Entity
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.TryGetComponent(out Projectile proj) && !proj.IsHostileProjectile)
+        GameObject colObj = collision.gameObject;
+
+        if (colObj.TryGetComponent(out Projectile proj) && !proj.IsHostileProjectile)
         {
             Damage(proj.Damage);
             Destroy(proj.gameObject);
         }
+        else if (colObj.TryGetComponent(out Hazard hazard))
+        {
+            if (hazard.MarkEntity(gameObject))
+                Damage(hazard.Damage);
+        }
+    }
+
+    public int ContactedPlayer()
+    {
+        if (hazardObj != null)
+        {
+            contactDmg++;
+            TriggerHazard();
+        }
+
+        return contactDmg;
+    }
+
+    private void TriggerHazard()
+    {
+        // First restructure the hierarchy to be the parent of this object while retaining all prior positions
+        hazardObj.transform.SetParent(transform.parent, true);
+        transform.SetParent(hazardObj.transform, true);
+
+        hazardObj.SetActive(true);
+        hazardObj.GetComponent<Hazard>().CreateHazard();
     }
 }

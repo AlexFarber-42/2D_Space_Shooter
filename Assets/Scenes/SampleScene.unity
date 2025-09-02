@@ -376,6 +376,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WaveManager
   levelWaves:
   - {fileID: 11400000, guid: 8f39825e39f0288488a417362b99817e, type: 2}
+  - {fileID: 11400000, guid: 1d52975b22dcb954ca6d74044cd22108, type: 2}
+  - {fileID: 11400000, guid: 9006ca7c9406b9742b61f0ce66f678f1, type: 2}
+  - {fileID: 11400000, guid: 0d99231d23431e9499936d03d9c209b9, type: 2}
+  - {fileID: 11400000, guid: 3921e146a11a09b468d007a05f5b997b, type: 2}
+  - {fileID: 11400000, guid: 8f39825e39f0288488a417362b99817e, type: 2}
   enemyPool: {fileID: 1507444243}
   minArea: {x: -8, y: -1, z: 0}
   maxArea: {x: 8, y: 4, z: 0}
@@ -2220,7 +2225,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2674,10 +2679,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8c478192d6dadd44a987192011ff88c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
-  health: 1
+  health: 3
   moveSpeed: 6
   fireRate: 0.2
   startingProj: {fileID: 6637855890290191017, guid: cc1d1337baee50043b2ba6b128dd6382, type: 3}
+  deathEffects:
+  - {fileID: 3363487470621884915, guid: 7c54f99826c366d4885bc3097fa9e31a, type: 3}
+  - {fileID: 3031677591013776423, guid: b746acd7c1cf1f1429598e07917ada44, type: 3}
+  - {fileID: 5850760722485931425, guid: 4e402a579c201324fbb22508b50e45af, type: 3}
+  - {fileID: 6773327078806780045, guid: 94bb0776358676547acb5752e88be757, type: 3}
+  scaleOverride: {x: 1, y: 1}
+  colorOverride: {r: 1, g: 1, b: 1, a: 1}
   maxHealth: 3
   isInvincible: 1
   PlayerInput: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

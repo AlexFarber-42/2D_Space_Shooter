@@ -51,6 +51,10 @@ MonoBehaviour:
   moveSpeed: 3.5
   fireRate: 0
   startingProj: {fileID: 0}
+  deathEffects:
+  - {fileID: 7976968096624850413, guid: 8c207119800917d4e86ecf6d1e41a117, type: 3}
+  - {fileID: 5320554242939728527, guid: dbe89f81b200336459e718a84b619f0c, type: 3}
+  - {fileID: 4268932340006307034, guid: 4edb9d26f15f248478ee97e91eda681a, type: 3}
   scoreValue: 5
   drops:
   - pickupPrefab: {fileID: 2366921362289610274, guid: 8b045a74a551ac146a37c19119d39554, type: 3}

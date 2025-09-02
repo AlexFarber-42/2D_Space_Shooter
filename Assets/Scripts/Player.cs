@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -36,7 +37,7 @@ public class Player : Entity
         PlayerInput.FindActionMap("Player").Disable();
     }
 
-    private void Awake()
+    protected override void Awake()
     {
         inputMovement   = InputSystem.actions.FindAction("Move");
         inputFire       = InputSystem.actions.FindAction("Fire");
@@ -130,10 +131,42 @@ public class Player : Entity
 
         if (health <= 0)
         {
+            // Disable the player's controls
+            PlayerInput.FindActionMap("Player").Disable();
+
             // Handle player death (e.g., reload scene, show game over screen, etc.)
-            Debug.Log("Player has died.");
-            Destroy(gameObject);
+            StartCoroutine(KillPlayer());
         }
+    }
+
+    private IEnumerator KillPlayer()
+    {
+        int effectLimitPreBig = 5;
+        Vector3 randomRot;
+
+        SpriteRenderer sr = GetComponentInChildren<SpriteRenderer>();
+        float xDelta = sr.bounds.size.x;
+        float yDelta = sr.bounds.size.y;
+
+        Vector3 randomPositioning;
+
+        // Smaller explosions and electrical effects
+        for (int i = 0; i < effectLimitPreBig; ++i)
+        {
+            randomRot = new Vector3(0, 0, Random.Range(0, 360));
+            randomPositioning = new Vector3(transform.position.x + Random.Range(-xDelta / 2, xDelta / 2), transform.position.y + Random.Range(-yDelta / 2, yDelta / 2), 0f);
+            Instantiate(deathEffects[Random.Range(1, deathEffects.Length)], randomPositioning, Quaternion.Euler(randomRot));
+            yield return new WaitForSeconds(.4f);
+        }
+
+        // Big explosion in center
+        randomRot = new Vector3(0, 0, Random.Range(0, 360));
+        GameObject finalExplo = Instantiate(deathEffects[0], transform.position, Quaternion.Euler(randomRot));
+        Animator anim = finalExplo.GetComponent<Animator>();
+        float delay = anim.runtimeAnimatorController.animationClips.FirstOrDefault().length;
+        yield return new WaitForSeconds(delay);
+        Debug.Log("Player has died.");
+        Destroy(gameObject);
     }
 
     public void Heal(int amount)
@@ -176,6 +209,11 @@ public class Player : Entity
 
             Destroy(colObj);
         }
+        else if (colObj.TryGetComponent(out Hazard hazard))
+        {
+            if (hazard.MarkEntity(gameObject))
+                Damage(hazard.Damage);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -184,9 +222,8 @@ public class Player : Entity
 
         if (colObj.TryGetComponent(out Enemy enemyComp))
         {
-            // TODO ---> Call a method with a return for an int for the damage itself so
-            // explosions and effects are cleaner and within the enemy comp itself
-            Damage(enemyComp.ContactDamage);
+            int damageTaken = enemyComp.ContactedPlayer();
+            Damage(damageTaken);
             Destroy(colObj);
         }
     }

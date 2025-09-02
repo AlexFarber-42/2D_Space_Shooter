@@ -51,6 +51,12 @@ MonoBehaviour:
   moveSpeed: 5.5
   fireRate: 1.25
   startingProj: {fileID: 212687456839092171, guid: 57b2016492f820647bd8a7f43ca662b3, type: 3}
+  deathEffects:
+  - {fileID: 7976968096624850413, guid: 8c207119800917d4e86ecf6d1e41a117, type: 3}
+  - {fileID: 5320554242939728527, guid: dbe89f81b200336459e718a84b619f0c, type: 3}
+  - {fileID: 4268932340006307034, guid: 4edb9d26f15f248478ee97e91eda681a, type: 3}
+  scaleOverride: {x: 1.25, y: 1.25}
+  colorOverride: {r: 0.9529412, g: 0.50980395, b: 0.37254903, a: 1}
   scoreValue: 25
   drops:
   - pickupPrefab: {fileID: 5205448864696353828, guid: a39c005290f781749ae39e1b18c87d8f, type: 3}
