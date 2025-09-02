@@ -37,4 +37,10 @@ public class Projectile : MonoBehaviour
         int dir = hostileProj ? -1 : 1;
         rb.AddForceY(projectileSpeed * dir, ForceMode2D.Impulse);
     }
+
+    public void FireProjectile(Transform forDir)
+    {
+        rb = GetComponent<Rigidbody2D>();
+        rb.AddForce(projectileSpeed * forDir.up, ForceMode2D.Impulse);
+    }
 }

@@ -14,8 +14,10 @@ public class Player : Entity
 
     private InputAction inputMovement;
     private InputAction inputFire;
+    private InputAction inputTurn;
 
     private Vector2 movementDir;
+    private int turnState = 0; // -1 is left, 1 is right
 
     private Rigidbody2D rb;
     private Coroutine isFiring = null;
@@ -38,15 +40,27 @@ public class Player : Entity
     {
         inputMovement   = InputSystem.actions.FindAction("Move");
         inputFire       = InputSystem.actions.FindAction("Fire");
+        inputTurn       = InputSystem.actions.FindAction("Turn");
 
         rb              = GetComponent<Rigidbody2D>();
         health          = maxHealth;
     }
 
+    private bool turnInc = false;
+
     private void Update()
     {
         // Movement Direction
         movementDir = inputMovement.ReadValue<Vector2>();
+
+        // Turn Direction
+        if (inputTurn.IsPressed() && !turnInc)
+        {
+            turnInc = true;
+            PlayerTurn();
+        }
+        else if (!inputTurn.IsPressed() && turnInc)
+            turnInc = false;
 
         // Firing Logic
         if (inputFire.IsPressed() && isFiring is null)
@@ -55,6 +69,24 @@ public class Player : Entity
         {
             StopCoroutine(isFiring);
             isFiring = null;
+        }
+    }
+
+    private int maxTurnDegree = 20;
+    private int degreeShift = 10;
+    private int currentShift = 0;
+
+    private void PlayerTurn()
+    {
+        turnState = (int)inputTurn.ReadValue<float>();
+
+        if (turnState is 0)
+            return;
+        else
+        {
+            int shift = turnState is 1 ? currentShift - degreeShift : currentShift + degreeShift;
+            currentShift = Mathf.Clamp(shift, -maxTurnDegree, maxTurnDegree);
+            transform.rotation = Quaternion.Euler(0f, 0f, currentShift);
         }
     }
 
@@ -73,13 +105,13 @@ public class Player : Entity
         while (true)
         {
             // TODO ---> Add Pooling
-            GameObject projInstance = Instantiate(currentProjectile, transform.position, currentProjectile.transform.rotation);
+            GameObject projInstance = Instantiate(currentProjectile, transform.position, transform.rotation);
             Projectile proj = projInstance.GetComponent<Projectile>();
 
             // TODO ---> Will be unique in modifying the projectile based on the player's upgrades or the projectile itself
 
             proj.IsHostileProjectile = false;
-            proj.FireProjectile();
+            proj.FireProjectile(transform);
             ++projs_Fired; // TODO ---> This is different then the other version in Fire as a data collection tool to determine a player's accuracy at the end of a round
 
             yield return new WaitForSeconds(fireRate);
