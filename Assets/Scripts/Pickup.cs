@@ -46,7 +46,6 @@ public class Pickup : MonoBehaviour
         {
             case PickupType.Money:
                 BankSystem.AddMoney(value);
-                MoneyTracker.Instance.UpdateString();
 
                 ScoreManager.IncreaseScore(value * 2);
                 break;

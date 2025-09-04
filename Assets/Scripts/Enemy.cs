@@ -18,9 +18,13 @@ public class Enemy : Entity
 
     private GameObject hazardObj;
 
+    private WaveManager wm;
+
     protected override void Awake()
     {
         base.Awake();
+
+        wm = WaveManager.Instance;
 
         // Retrieves the hazard object that activates upon detonation or elimination
         if (explodesOnContact)
@@ -65,6 +69,7 @@ public class Enemy : Entity
                 catch (IndexOutOfRangeException)
                 {
                     beginPathTraversal = false;
+                    wm.IncrementLeft();
                     Destroy(gameObject);
                 }
             }
@@ -72,6 +77,7 @@ public class Enemy : Entity
             {
                 // Reached the end of the path, handle accordingly (e.g., destroy enemy, etc.)
                 beginPathTraversal = false;
+                wm.IncrementLeft();
                 Destroy(gameObject);
             }
         }
@@ -109,6 +115,7 @@ public class Enemy : Entity
 
             ScoreManager.IncreaseScore(scoreValue);
             TryDropItem();
+            wm.IncrementKilled();
 
             // TODO ---> Handle enemy death via effect like an explosion of bug guts
             Destroy(gameObject);
