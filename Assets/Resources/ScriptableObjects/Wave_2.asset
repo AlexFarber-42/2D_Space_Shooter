@@ -13,12 +13,14 @@ MonoBehaviour:
   m_Name: Wave_2
   m_EditorClassIdentifier: Assembly-CSharp::WaveSO
   waves:
-  - waveName: Wave
+  - waveName: 
     enemies:
-    - {fileID: 968305722208505283, guid: df78e9198732acc4097c48a186d0d263, type: 3}
-    - {fileID: 968305722208505283, guid: df78e9198732acc4097c48a186d0d263, type: 3}
-    numberOfEnemies: 0200000002000000
+    - {fileID: 6462967372403736393, guid: dee1cd6056f5fb14caf8285e5bab5b19, type: 3}
+    - {fileID: 6462967372403736393, guid: dee1cd6056f5fb14caf8285e5bab5b19, type: 3}
+    numberOfEnemies: 0200000001000000
     spawnDelay:
-    - 0.25
-    - 0.25
-  pathway: {fileID: 4340838529179383259, guid: 151062e48576c9043baf3d7983feb0f2, type: 3}
+    - 2
+    - 0.5
+    pathway:
+    - {fileID: 6714700722287226529, guid: 87a5486d3ae524942a0b2f8318ef1416, type: 3}
+    - {fileID: 4340838529179383259, guid: 151062e48576c9043baf3d7983feb0f2, type: 3}

@@ -224,6 +224,7 @@ public class Player : Entity
         {
             int damageTaken = enemyComp.ContactedPlayer();
             Damage(damageTaken);
+            WaveManager.Instance.IncrementKilled();
             Destroy(colObj);
         }
     }

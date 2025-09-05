@@ -9,6 +9,7 @@ public class WaveManager : MonoBehaviour
 
     [SerializeField] private WaveSO[] levelWaves;
     [SerializeField] private Transform enemyPool;
+    private float spawnBetweenWaves = 1.5f;
     private float spawnBetweenEnemies = .75f;
 
     [Header("Variable Wave Limits")]
@@ -45,6 +46,11 @@ public class WaveManager : MonoBehaviour
         }
     }
 
+    public Transform EnemyPool
+    {
+        get => enemyPool;
+    }
+
     private void Awake()
     {
         if (Instance == null)
@@ -60,7 +66,12 @@ public class WaveManager : MonoBehaviour
             foreach (WaveGUI wg in wave.waves)
             {
                 for (int i = 0; i < wg.enemies.Length; ++i)
+                {
                     totalEnemies += wg.numberOfEnemies[i];
+
+                    if (wg.enemies[i].TryGetComponent(out Spawner spawner))
+                        totalEnemies += spawner.SpawnsRemaining;
+                }
             }
         }
     }
@@ -73,6 +84,7 @@ public class WaveManager : MonoBehaviour
         progressBar.Reset();
 
         StartCoroutine(SpawnWaves());
+        progressBar.ToggleLevelActivity();
     }
 
     private void FixedUpdate()
@@ -103,30 +115,9 @@ public class WaveManager : MonoBehaviour
     {
         foreach (WaveSO wave in levelWaves)
         {
-            GameObject path = wave.pathway;
-
-            // Default is 0, 0
-            Vector3 posOfSpawnOfPath = transform.position;
-
-            // If the path is detected to be only 2, aka a travel across screen, then randomize the instantiation location 
-            if (path.transform.childCount is 2)
-            {
-                Transform pathCheck = path.transform.GetChild(0);
-
-                if (pathCheck.position.x is 0)  // Vertical Movement
-                    posOfSpawnOfPath = new Vector3(UnityEngine.Random.Range(minArea.x, maxArea.x), 0f, 0f);
-                else                            // Horizontal Movements
-                    posOfSpawnOfPath = new Vector3(0f, UnityEngine.Random.Range(minArea.y, maxArea.y), 0f);
-            }
-
-            GameObject pathway = Instantiate(path, posOfSpawnOfPath, Quaternion.identity, transform);
-            Transform[] pathPoints = pathway.GetComponent<Pathway>().GetWavePoints();
-
             for (int i = 0; i < wave.waves.Length; ++i)
             {
                 WaveGUI currentWave = wave.waves[i];
-                GameObject pathPool = new GameObject($"Path Pool {i + 1}");
-                pathPool.transform.SetParent(enemyPool.transform);
 
                 // This loop limits the j to the enemy prefabs, 
                 for (int j = 0; j < currentWave.enemies.Length; ++j)
@@ -134,12 +125,33 @@ public class WaveManager : MonoBehaviour
                     GameObject enemyPrefab;
                     int numberOfEnemies;
                     float spawnDelay;
+                    GameObject path;
+                    GameObject pathway;
+                    Transform[] pathPoints;
 
                     try
                     {
                         enemyPrefab     = currentWave.enemies[j];
                         numberOfEnemies = currentWave.numberOfEnemies[j];
                         spawnDelay      = currentWave.spawnDelay[j];
+                        path            = currentWave.pathway[j];
+
+                        // Default is 0, 0
+                        Vector3 posOfSpawnOfPath = transform.position;
+
+                        // If the path is detected to be only 2, aka a travel across screen, then randomize the instantiation location 
+                        if (path.transform.childCount is 2)
+                        {
+                            Transform pathCheck = path.transform.GetChild(0);
+
+                            if (pathCheck.position.x is 0)  // Vertical Movement
+                                posOfSpawnOfPath = new Vector3(UnityEngine.Random.Range(minArea.x, maxArea.x), 0f, 0f);
+                            else                            // Horizontal Movements
+                                posOfSpawnOfPath = new Vector3(0f, UnityEngine.Random.Range(minArea.y, maxArea.y), 0f);
+                        }
+
+                        pathway = Instantiate(path, posOfSpawnOfPath, Quaternion.identity, transform);
+                        pathPoints = pathway.GetComponent<Pathway>().GetWavePoints();
                     }
                     catch (IndexOutOfRangeException ex)
                     {
@@ -148,20 +160,23 @@ public class WaveManager : MonoBehaviour
                         break;
                     }
 
+                    GameObject pathPool = new GameObject($"Path_Pool_{i + 1}_{j + 1}");
+
                     for (int k = 0; k < numberOfEnemies; ++k)
                     {
                         GameObject enemyInstance = Instantiate(enemyPrefab, pathPoints[0].position, Quaternion.identity, pathPool.transform);
                         enemyInstance.GetComponent<Enemy>().SetPath(pathPoints[1..pathPoints.Length]);
                         yield return new WaitForSeconds(spawnDelay);
                     }
+                    
+                    pathPool.transform.SetParent(enemyPool.transform);
+                    enemyMap.Add(pathway, pathPool.transform);
                 }
-
-                enemyMap.Add(pathway, pathPool.transform);
 
                 yield return new WaitForSeconds(spawnBetweenEnemies);
             }
 
-            yield return new WaitForSeconds(spawnBetweenEnemies);
+            yield return new WaitForSeconds(spawnBetweenWaves);
         }
     }
 }

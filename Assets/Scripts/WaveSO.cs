@@ -4,7 +4,6 @@ using UnityEngine;
 public class WaveSO : ScriptableObject
 {
     public WaveGUI[] waves;
-    public GameObject pathway;
 }
 
 [System.Serializable]
@@ -15,4 +14,5 @@ public class WaveGUI
     public GameObject[] enemies;
     public int[] numberOfEnemies;
     public float[] spawnDelay;
+    public GameObject[] pathway;
 }

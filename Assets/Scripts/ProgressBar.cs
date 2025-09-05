@@ -18,6 +18,11 @@ public class ProgressBar : MonoBehaviour
 
     private RectTransform rect;
 
+    private bool levelActive = false;
+
+    public void ToggleLevelActivity()
+        => levelActive = !levelActive;
+
     private void Awake()
     {
         // Set the width and height of the progress bar to a more uniform size
@@ -76,6 +81,9 @@ public class ProgressBar : MonoBehaviour
 
     private void Update()
     {
+        if (!levelActive)
+            return;
+
         // Add any progress points if necessary
         if (container.childCount / (float)progressPointMax <= waveMan.EnemyProgress)
             AddProgressPoint();

@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using System.Linq;
 using UnityEngine;
 
 public class Enemy : Entity
@@ -19,6 +18,8 @@ public class Enemy : Entity
     private GameObject hazardObj;
 
     private WaveManager wm;
+
+    public int GetScoreValue() => scoreValue;
 
     protected override void Awake()
     {
@@ -112,6 +113,15 @@ public class Enemy : Entity
             // If a hazardous object is detected from this entities corpse, activate it (i.e. boomer flis exploding regardless of contact or not)
             if (hazardObj != null)
                 TriggerHazard();
+
+            if (TryGetComponent(out Spawner spawner) && spawner.SpawnsRemaining > 0)
+            {
+                for (int i = 0; i < spawner.SpawnsRemaining; ++i)
+                {
+                    wm.IncrementKilled();
+                    ScoreManager.IncreaseScore(spawner.EnemyScoreCheck);
+                }
+            }
 
             ScoreManager.IncreaseScore(scoreValue);
             TryDropItem();
