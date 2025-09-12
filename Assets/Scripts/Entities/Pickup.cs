@@ -33,7 +33,7 @@ public class Pickup : MonoBehaviour
             return;
 
         if (timeActive >= lingerDuration)
-            Destroy(gameObject);
+            Pools.Instance.RemoveObject(gameObject);
         else
             timeActive += Time.deltaTime;
     }

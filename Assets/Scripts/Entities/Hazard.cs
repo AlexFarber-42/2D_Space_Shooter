@@ -63,6 +63,6 @@ public class Hazard : MonoBehaviour
             yield return new WaitForSeconds(delta);
         }
 
-        Destroy(gameObject);
+        Pools.Instance.RemoveObject(gameObject);
     }
 }

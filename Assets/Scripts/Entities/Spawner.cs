@@ -85,11 +85,13 @@ public class Spawner : MonoBehaviour
             }
         }
 
+        // TODO ---> Add a breakup effect or explosion effect at end with a delay
+
         Destroy(gameObject);
 
         void SpawnUnit()
         {
-            GameObject enemy = Instantiate(enemyPrefab, transform.position, Quaternion.identity, WaveManager.Instance.EnemyPool);
+            GameObject enemy = Pools.Instance.SpawnObject(Pools.PoolType.Enemy, enemyPrefab, transform.position, Quaternion.identity);
             enemy.GetComponent<Enemy>().SetPath(new Transform[1] { GeneratePath() });
             ++spawnCount;
         }

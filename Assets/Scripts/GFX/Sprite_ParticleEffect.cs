@@ -14,6 +14,6 @@ public class Sprite_ParticleEffect : MonoBehaviour
         Animator anim = GetComponent<Animator>();
         float delay = anim.runtimeAnimatorController.animationClips.FirstOrDefault().length;
         yield return new WaitForSeconds(delay);
-        Destroy(gameObject);    
+        Destroy(gameObject);
     }
 }

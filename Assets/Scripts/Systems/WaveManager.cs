@@ -8,7 +8,6 @@ public class WaveManager : MonoBehaviour
     public static WaveManager Instance { get; private set; }
 
     [SerializeField] private WaveSO[] levelWaves;
-    [SerializeField] private Transform enemyPool;
     private float spawnBetweenWaves = 1.5f;
     private float spawnBetweenEnemies = .75f;
 
@@ -44,11 +43,6 @@ public class WaveManager : MonoBehaviour
 
             return total / (float)totalEnemies;
         }
-    }
-
-    public Transform EnemyPool
-    {
-        get => enemyPool;
     }
 
     private void Awake()
@@ -87,29 +81,29 @@ public class WaveManager : MonoBehaviour
         progressBar.ToggleLevelActivity();
     }
 
-    private void FixedUpdate()
-    {
-        if (enemyMap.Count is 0)
-            return;
+    //private void FixedUpdate()
+    //{
+    //    if (enemyMap.Count is 0)
+    //        return;
 
-        // Check if a pathway is cleared to delete it and its entry in the dictionary
-        Queue<GameObject> gc = new Queue<GameObject>();
+    //    // Check if a pathway is cleared to delete it and its entry in the dictionary
+    //    Queue<GameObject> gc = new Queue<GameObject>();
 
-        foreach (KeyValuePair<GameObject, Transform> list in enemyMap)
-        {
-            if (list.Value.childCount is 0)
-                gc.Enqueue(list.Key);
-        }
+    //    foreach (KeyValuePair<GameObject, Transform> list in enemyMap)
+    //    {
+    //        if (list.Value.childCount is 0)
+    //            gc.Enqueue(list.Key);
+    //    }
 
-        int gcCount = gc.Count;
-        for (int i = 0; i < gcCount; ++i)
-        {
-            GameObject go = gc.Dequeue();
-            Destroy(enemyMap[go].gameObject);
-            enemyMap.Remove(go);
-            Destroy(go);
-        }
-    }
+    //    int gcCount = gc.Count;
+    //    for (int i = 0; i < gcCount; ++i)
+    //    {
+    //        GameObject go = gc.Dequeue();
+    //        Destroy(enemyMap[go].gameObject);
+    //        enemyMap.Remove(go);
+    //        Destroy(go);
+    //    }
+    //}
 
     private IEnumerator SpawnWaves()
     {
@@ -160,17 +154,14 @@ public class WaveManager : MonoBehaviour
                         break;
                     }
 
-                    GameObject pathPool = new GameObject($"Path_Pool_{i + 1}_{j + 1}");
-
                     for (int k = 0; k < numberOfEnemies; ++k)
                     {
-                        GameObject enemyInstance = Instantiate(enemyPrefab, pathPoints[0].position, Quaternion.identity, pathPool.transform);
+                        GameObject enemyInstance = Pools.Instance.SpawnObject(Pools.PoolType.Enemy, enemyPrefab, pathPoints[0].position, Quaternion.identity);
                         enemyInstance.GetComponent<Enemy>().SetPath(pathPoints[1..pathPoints.Length]);
                         yield return new WaitForSeconds(spawnDelay);
                     }
-                    
-                    pathPool.transform.SetParent(enemyPool.transform);
-                    enemyMap.Add(pathway, pathPool.transform);
+
+                    // enemyMap.Add(pathway, pathPool.transform);
                 }
 
                 yield return new WaitForSeconds(spawnBetweenEnemies);

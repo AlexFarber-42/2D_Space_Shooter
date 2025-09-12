@@ -107,7 +107,7 @@ public class Player : Entity
         {
             // TODO ---> Add Pooling
             Quaternion startingRot = transform.rotation * currentProjectile.transform.rotation;
-            GameObject projInstance = Instantiate(currentProjectile, transform.position, startingRot);
+            GameObject projInstance = Pools.Instance.SpawnObject(Pools.PoolType.Projectile, currentProjectile, transform.position, startingRot);
             Projectile proj = projInstance.GetComponent<Projectile>();
 
             // TODO ---> Will be unique in modifying the projectile based on the player's upgrades or the projectile itself
@@ -195,7 +195,7 @@ public class Player : Entity
         if (colObj.TryGetComponent(out Projectile proj) && proj.IsHostileProjectile)
         {
             Damage(proj.Damage);
-            Destroy(colObj);
+            Pools.Instance.RemoveObject(colObj);
         }
         else if (colObj.TryGetComponent(out Pickup pickup))
         {
@@ -207,7 +207,7 @@ public class Player : Entity
             else
                 pickup.ActivatePickup(this);
 
-            Destroy(colObj);
+            Pools.Instance.RemoveObject(colObj);
         }
         else if (colObj.TryGetComponent(out Hazard hazard))
         {
@@ -225,7 +225,7 @@ public class Player : Entity
             int damageTaken = enemyComp.ContactedPlayer();
             Damage(damageTaken);
             WaveManager.Instance.IncrementKilled();
-            Destroy(colObj);
+            Pools.Instance.RemoveObject(colObj);
         }
     }
 }

@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4562895259816934544}
   - component: {fileID: 2493669192059637909}
   - component: {fileID: 7881834001140286802}
-  - component: {fileID: -5712995874132451753}
   - component: {fileID: -22442529653465994}
   - component: {fileID: -806047083726167573}
   m_Layer: 0
@@ -20,7 +19,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4562895259816934544
 Transform:
   m_ObjectHideFlags: 0
@@ -116,18 +115,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-5712995874132451753
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8083093672271341237}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c16a77cd4dd6eab409436895e18dde81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Sprite_ParticleEffect
 --- !u!58 &-22442529653465994
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -178,3 +165,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Hazard
   spriteFrameCount: 5
   scaleSet: 0.185
+  damageValue: 1

@@ -45,8 +45,7 @@ public class Entity : MonoBehaviour
             if (projs_Fired is 0)
                 minLimit = fireRate <= .4f ? 0f : .4f;
 
-            // TODO ---> Add Pooling
-            GameObject projInstance = Instantiate(startingProj, transform.position, startingProj.transform.rotation);
+            GameObject projInstance = Pools.Instance.SpawnObject(Pools.PoolType.Projectile, startingProj, transform.position, startingProj.transform.rotation);
             Projectile proj = projInstance.GetComponent<Projectile>();
 
             proj.IsHostileProjectile = true;

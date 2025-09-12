@@ -9,13 +9,12 @@ public class Enemy : Entity
     [SerializeField] private Drop[] drops;
     [SerializeField] private int contactDmg = 1;
     [SerializeField] private bool explodesOnContact = false;
+    [SerializeField] private GameObject hazard;
 
     private Transform[] wavePoints;
     private Transform currentPoint;
     private int index;
     private bool beginPathTraversal = false;
-
-    private GameObject hazardObj;
 
     private WaveManager wm;
 
@@ -26,10 +25,6 @@ public class Enemy : Entity
         base.Awake();
 
         wm = WaveManager.Instance;
-
-        // Retrieves the hazard object that activates upon detonation or elimination
-        if (explodesOnContact)
-            hazardObj = transform.GetChild(0).gameObject;
     }
 
     public void SetPath(Transform[] path)
@@ -71,7 +66,7 @@ public class Enemy : Entity
                 {
                     beginPathTraversal = false;
                     wm.IncrementLeft();
-                    Destroy(gameObject);
+                    Pools.Instance.RemoveObject(gameObject);
                 }
             }
             else
@@ -79,7 +74,7 @@ public class Enemy : Entity
                 // Reached the end of the path, handle accordingly (e.g., destroy enemy, etc.)
                 beginPathTraversal = false;
                 wm.IncrementLeft();
-                Destroy(gameObject);
+                Pools.Instance.RemoveObject(gameObject);
             }
         }
     }
@@ -111,7 +106,7 @@ public class Enemy : Entity
             }
 
             // If a hazardous object is detected from this entities corpse, activate it (i.e. boomer flis exploding regardless of contact or not)
-            if (hazardObj != null)
+            if (hazard != null)
                 TriggerHazard();
 
             if (TryGetComponent(out Spawner spawner) && spawner.SpawnsRemaining > 0)
@@ -128,7 +123,7 @@ public class Enemy : Entity
             wm.IncrementKilled();
 
             // TODO ---> Handle enemy death via effect like an explosion of bug guts
-            Destroy(gameObject);
+            Pools.Instance.RemoveObject(gameObject);
         }
     }
 
@@ -141,7 +136,7 @@ public class Enemy : Entity
             // Drop the item
             if (roll <= drop.chance)
             {
-                Instantiate(drop.pickupPrefab, transform.position, Quaternion.identity);
+                Pools.Instance.SpawnObject(Pools.PoolType.Pickup, drop.pickupPrefab, transform.position, Quaternion.identity);
                 break;
             }
         }
@@ -154,7 +149,7 @@ public class Enemy : Entity
         if (colObj.TryGetComponent(out Projectile proj) && !proj.IsHostileProjectile)
         {
             Damage(proj.Damage);
-            Destroy(proj.gameObject);
+            Pools.Instance.RemoveObject(colObj);
         }
         else if (colObj.TryGetComponent(out Hazard hazard))
         {
@@ -165,7 +160,7 @@ public class Enemy : Entity
 
     public int ContactedPlayer()
     {
-        if (hazardObj != null)
+        if (hazard != null)
         {
             contactDmg++;
             TriggerHazard();
@@ -176,11 +171,8 @@ public class Enemy : Entity
 
     private void TriggerHazard()
     {
-        // First restructure the hierarchy to be the parent of this object while retaining all prior positions
-        hazardObj.transform.SetParent(transform.parent, true);
-        transform.SetParent(hazardObj.transform, true);
+        GameObject hazInstance = Pools.Instance.SpawnObject(Pools.PoolType.Hazards, hazard, transform.position, hazard.transform.rotation);
 
-        hazardObj.SetActive(true);
-        hazardObj.GetComponent<Hazard>().CreateHazard();
+        hazInstance.GetComponent<Hazard>().CreateHazard();
     }
 }

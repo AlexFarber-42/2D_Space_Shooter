@@ -85,7 +85,7 @@ public class ProgressBar : MonoBehaviour
             return;
 
         // Add any progress points if necessary
-        if (container.childCount / (float)progressPointMax <= waveMan.EnemyProgress)
+        if (container.childCount / (float)progressPointMax < waveMan.EnemyProgress)
             AddProgressPoint();
 
         CheckThresholds();
