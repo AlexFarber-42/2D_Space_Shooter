@@ -7,7 +7,7 @@ AnimationClip:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: impfx1_quick_impact_B_small_orange
-  serializedVersion: 6
+  serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
   m_UseHighQualityCurve: 1
@@ -18,14 +18,15 @@ AnimationClip:
   m_ScaleCurves: []
   m_FloatCurves: []
   m_PPtrCurves:
-  - curve:
-    - time: 0.000000
+  - serializedVersion: 2
+    curve:
+    - time: 0
       value: {fileID: 21300000, guid: 3156a7443d002e54d9605a250985ce1f, type: 3}
     - time: 0.066667
       value: {fileID: 21300000, guid: cb910197d5867654aa30235e8337559e, type: 3}
     - time: 0.133333
       value: {fileID: 21300000, guid: aaa4b7eae4ec10447b63afdb457ce9fd, type: 3}
-    - time: 0.200000
+    - time: 0.2
       value: {fileID: 21300000, guid: e6ea026796be13543b1eac1ce9d729c0, type: 3}
     - time: 0.266667
       value: {fileID: 21300000, guid: 34e1e9346511ce848925149e0e76caa6, type: 3}
@@ -33,6 +34,7 @@ AnimationClip:
     path: 
     classID: 212
     script: {fileID: 0}
+    flags: 2
   m_SampleRate: 15
   m_WrapMode: 0
   m_Bounds:
@@ -47,6 +49,8 @@ AnimationClip:
       typeID: 212
       customType: 23
       isPPtrCurve: 1
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     pptrCurveMapping:
     - {fileID: 21300000, guid: 3156a7443d002e54d9605a250985ce1f, type: 3}
     - {fileID: 21300000, guid: cb910197d5867654aa30235e8337559e, type: 3}
@@ -63,7 +67,7 @@ AnimationClip:
     m_Level: 0
     m_CycleOffset: 0
     m_HasAdditiveReferencePose: 0
-    m_LoopTime: 1
+    m_LoopTime: 0
     m_LoopBlend: 0
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0

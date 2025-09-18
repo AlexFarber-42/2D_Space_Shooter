@@ -20,10 +20,8 @@ public class Enemy : Entity
 
     public int GetScoreValue() => scoreValue;
 
-    protected override void Awake()
+    private void Start()
     {
-        base.Awake();
-
         wm = WaveManager.Instance;
     }
 

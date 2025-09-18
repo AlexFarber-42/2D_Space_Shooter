@@ -7,8 +7,8 @@ public class EntityPool
     private ObjectPool<GameObject> pool;
 
     private Transform parentTrans;
-    private int defaultSize;
-    private int maxSize;
+    private byte defaultSize;
+    private byte maxSize;
 
     public GameObject PrefabCheck
     {
@@ -20,7 +20,7 @@ public class EntityPool
         get => prefab.name;
     }
 
-    public EntityPool(GameObject prefab, Transform parentTrans, int defaultSize = 20, int maxSize = 50)
+    public EntityPool(GameObject prefab, Transform parentTrans, byte defaultSize = 32, byte maxSize = 255)
     {
         this.prefab         = prefab;
         this.parentTrans    = parentTrans;

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6222262214191905050}
   - component: {fileID: 5115068653637972756}
   - component: {fileID: 7802322393221970139}
+  - component: {fileID: 5305272518471563208}
   m_Layer: 6
   m_Name: Enemy_Warrior_Drone
   m_TagString: Enemy
@@ -67,6 +68,7 @@ MonoBehaviour:
     chance: 50
   contactDmg: 1
   explodesOnContact: 0
+  hazard: {fileID: 0}
 --- !u!212 &6222262214191905050
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -188,3 +190,25 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0.05}
   m_Radius: 0.16
+--- !u!95 &5305272518471563208
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5438829479670690293}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 70388093266ad8d4f87cce051187131c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

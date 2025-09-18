@@ -18,7 +18,7 @@ public class Pools : MonoBehaviour
 
     [SerializeField] private Transform[] poolTransforms;
 
-    private Dictionary<EntityPool, Transform> pools = new Dictionary<EntityPool, Transform>();
+    private List<EntityPool> pools = new List<EntityPool>();
 
     private void Awake()
     {
@@ -33,15 +33,15 @@ public class Pools : MonoBehaviour
 
     public GameObject SpawnObject(PoolType type, GameObject objectPrefab, Vector3 loc, Quaternion quatDir)
     {
-        if (pools.Count is 0 || !pools.Any(pool => pool.Key.PrefabCheck == objectPrefab))
+        if (pools.Count is 0 || !pools.Any(pool => pool.PrefabCheck == objectPrefab))
         {
             GameObject newTransform = new GameObject($"{objectPrefab.name} Pool");
             newTransform.transform.SetParent(poolTransforms[(int)type]);
 
-            pools.Add(new EntityPool(objectPrefab, newTransform.transform), newTransform.transform);
+            pools.Add(new EntityPool(objectPrefab, newTransform.transform));
         }
 
-        EntityPool pool = pools.First(p => p.Key.PrefabCheck == objectPrefab).Key;
+        EntityPool pool = pools.First(p => p.PrefabCheck == objectPrefab);
 
         return pool.OnRetrieveEntity(loc);
     }
@@ -50,7 +50,7 @@ public class Pools : MonoBehaviour
     {
         try
         {
-            EntityPool pool = pools.First(p => objectToRemove.name.Contains(p.Key.PoolName)).Key;
+            EntityPool pool = pools.First(p => objectToRemove.name.Contains(p.PoolName));
 
             pool.OnReleaseEntity(objectToRemove);
         }

@@ -113,7 +113,7 @@ public class Player : Entity
             // TODO ---> Will be unique in modifying the projectile based on the player's upgrades or the projectile itself
 
             proj.IsHostileProjectile = false;
-            proj.FireProjectile(transform);
+            proj.FireProjectile(transform.eulerAngles, transform.up);
             ++projs_Fired; // TODO ---> This is different then the other version in Fire as a data collection tool to determine a player's accuracy at the end of a round
 
             yield return new WaitForSeconds(fireRate);
