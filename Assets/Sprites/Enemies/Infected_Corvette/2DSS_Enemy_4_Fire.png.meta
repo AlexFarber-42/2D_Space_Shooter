@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 3b684f06ec62d4442b5479ad1c98f877
+guid: 4c956b796f43e2345a45521528678e31
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8553140835179576645
-    second: 2DSS_Enemy_1_0
+      213: 4045159590148327335
+    second: 2DSS_Enemy_4_Fire_0
+  - first:
+      213: 4424371161805645316
+    second: 2DSS_Enemy_4_Fire_1
+  - first:
+      213: -7003114723257592207
+    second: 2DSS_Enemy_4_Fire_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -73,7 +79,7 @@ TextureImporter:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
-    resizeAlgorithm: 0
+    resizeAlgorithm: 1
     textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
@@ -126,13 +132,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 2DSS_Enemy_1_0
+      name: 2DSS_Enemy_4_Fire_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 9
-        width: 18
-        height: 18
+        x: 12
+        y: 23
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,74 +147,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 54d34cae54cd2b670800000000000000
-      internalID: 8553140835179576645
+      spriteID: 7a74e8e073b432830800000000000000
+      internalID: 4045159590148327335
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 2DSS_Enemy_1_1
+      name: 2DSS_Enemy_4_Fire_1
       rect:
         serializedVersion: 2
-        x: 39
-        y: 9
-        width: 18
-        height: 18
+        x: 44
+        y: 23
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: bb423c3f6755f3942a6cc312f94d6470
-      internalID: -1687944204
+      spriteID: 40668ed5126866d30800000000000000
+      internalID: 4424371161805645316
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 2DSS_Enemy_1_2
+      name: 2DSS_Enemy_4_Fire_2
       rect:
         serializedVersion: 2
-        x: 71
-        y: 9
-        width: 18
-        height: 18
+        x: 76
+        y: 23
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 6ab7744b0e3943643b37dbc1db808f43
-      internalID: -477747460
+      spriteID: 1765ce66340ffce90800000000000000
+      internalID: -7003114723257592207
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 2DSS_Enemy_1_3
+      name: 2DSS_Enemy_4_Fire_3
       rect:
         serializedVersion: 2
-        x: 103
-        y: 9
-        width: 18
-        height: 18
+        x: 108
+        y: 23
+        width: 8
+        height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2eaa97a502c048741ac037c0c4081043
-      internalID: 1792114267
+      spriteID: 37451b238f90a23428442be881b26459
+      internalID: 1745961461
       vertices: []
       indices: 
       edges: []
@@ -217,7 +223,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: ab674cfb10ee2be429f50b03dc41afd8
     internalID: 0
     vertices: []
     indices: 
@@ -225,14 +231,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      2DSS_Enemy_1_0: 8553140835179576645
-      2DSS_Enemy_1_1: -1687944204
-      2DSS_Enemy_1_2: -477747460
-      2DSS_Enemy_1_3: 1792114267
+      2DSS_Enemy_4_Fire_0: 4045159590148327335
+      2DSS_Enemy_4_Fire_1: 4424371161805645316
+      2DSS_Enemy_4_Fire_2: -7003114723257592207
+      2DSS_Enemy_4_Fire_3: 1745961461
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

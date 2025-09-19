@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9110315094143285364}
   - component: {fileID: -793215545612559528}
   - component: {fileID: 4756033773089248172}
+  - component: {fileID: 6557659865935422477}
   m_Layer: 0
   m_Name: Corvette_Hazard
   m_TagString: Untagged
@@ -127,9 +128,61 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9b58bbd566af1840b644b6c3da6b56d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Hazard
-  spriteFrameCount: 5
+  spriteFrameCount: 10
   scaleSet: 0.25
   damageValue: 1
+  containsLight: 1
+  lightSteps:
+  - intensity: 5
+    volIntensity: 0.03
+    innerRadius: 0.1
+    falloffVal: 0.85
+    lightColor: {r: 1, g: 0.77647066, b: 0.5803922, a: 1}
+  - intensity: 7
+    volIntensity: 0.05
+    innerRadius: 0.15
+    falloffVal: 0.8
+    lightColor: {r: 1, g: 0.8313726, b: 0.68235296, a: 1}
+  - intensity: 10
+    volIntensity: 0.05
+    innerRadius: 0.45
+    falloffVal: 0.7
+    lightColor: {r: 1, g: 0.7960785, b: 0.44705886, a: 1}
+  - intensity: 11
+    volIntensity: 0.06
+    innerRadius: 0.52
+    falloffVal: 0.55
+    lightColor: {r: 0.8313726, g: 0.5411765, b: 0.2392157, a: 1}
+  - intensity: 10
+    volIntensity: 0.05
+    innerRadius: 0.4
+    falloffVal: 0.45
+    lightColor: {r: 0.8313726, g: 0.41960788, b: 0.2392157, a: 1}
+  - intensity: 11
+    volIntensity: 0.06
+    innerRadius: 0.5
+    falloffVal: 0.36
+    lightColor: {r: 0.5647059, g: 0.21176472, b: 0.16470589, a: 1}
+  - intensity: 10
+    volIntensity: 0.05
+    innerRadius: 0.4
+    falloffVal: 0.4
+    lightColor: {r: 0.54901963, g: 0.1254902, b: 0.07058824, a: 1}
+  - intensity: 9
+    volIntensity: 0.04
+    innerRadius: 0.3
+    falloffVal: 0.5
+    lightColor: {r: 0.37647063, g: 0.043137256, b: 0, a: 1}
+  - intensity: 6
+    volIntensity: 0.04
+    innerRadius: 0.2
+    falloffVal: 0.5
+    lightColor: {r: 0.32941177, g: 0.078431375, b: 0.04705883, a: 1}
+  - intensity: 5
+    volIntensity: 0.03
+    innerRadius: 0.1
+    falloffVal: 0.8
+    lightColor: {r: 0.18823531, g: 0.027450982, b: 0.007843138, a: 1}
 --- !u!58 &4756033773089248172
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -166,3 +219,55 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.25
+--- !u!114 &6557659865935422477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3363487470621884915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.2D.Runtime::UnityEngine.Rendering.Universal.Light2D
+  m_ComponentVersion: 2
+  m_LightType: 3
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.841
+  m_Color: {r: 0.18867922, g: 0.026502116, b: 0.0062299776, a: 1}
+  m_Intensity: 5
+  m_LightVolumeIntensity: 0.03
+  m_LightVolumeEnabled: 1
+  m_ApplyToSortingLayers: 00000000e3ba03fd0501986fc7187fa06fce5fb3
+  m_LightCookieSprite: {fileID: 0}
+  m_DeprecatedPointLightCookieSprite: {fileID: 0}
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_OverlapOperation: 0
+  m_NormalMapDistance: 3
+  m_NormalMapQuality: 2
+  m_UseNormalMap: 0
+  m_ShadowsEnabled: 1
+  m_ShadowIntensity: 0.75
+  m_ShadowSoftness: 0.3
+  m_ShadowSoftnessFalloffIntensity: 0.5
+  m_ShadowVolumeIntensityEnabled: 0
+  m_ShadowVolumeIntensity: 0.75
+  m_LocalBounds:
+    m_Center: {x: 0, y: -0.00000011920929, z: 0}
+    m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0.08
+  m_PointLightOuterRadius: 1
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}

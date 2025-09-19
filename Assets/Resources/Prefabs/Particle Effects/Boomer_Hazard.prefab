@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7881834001140286802}
   - component: {fileID: -22442529653465994}
   - component: {fileID: -806047083726167573}
+  - component: {fileID: 5632925304532559115}
   m_Layer: 0
   m_Name: Boomer_Hazard
   m_TagString: Untagged
@@ -166,3 +167,82 @@ MonoBehaviour:
   spriteFrameCount: 5
   scaleSet: 0.185
   damageValue: 1
+  containsLight: 1
+  lightSteps:
+  - intensity: 3
+    volIntensity: 0.01
+    innerRadius: 0.25
+    falloffVal: 0.7
+    lightColor: {r: 0.9803922, g: 0.78823537, b: 0.6627451, a: 1}
+  - intensity: 4
+    volIntensity: 0.03
+    innerRadius: 0.3
+    falloffVal: 0.7
+    lightColor: {r: 0.9450981, g: 0.77647066, b: 0.7058824, a: 1}
+  - intensity: 5
+    volIntensity: 0.05
+    innerRadius: 0.35
+    falloffVal: 0.6
+    lightColor: {r: 1, g: 0.6313726, b: 0.37254903, a: 1}
+  - intensity: 6
+    volIntensity: 0.07
+    innerRadius: 0.4
+    falloffVal: 0.5
+    lightColor: {r: 0.85098046, g: 0.3529412, b: 0.2509804, a: 1}
+  - intensity: 5.5
+    volIntensity: 0.06
+    innerRadius: 0.45
+    falloffVal: 0.55
+    lightColor: {r: 0.5372549, g: 0.16862746, b: 0.09411766, a: 1}
+--- !u!114 &5632925304532559115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8083093672271341237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.2D.Runtime::UnityEngine.Rendering.Universal.Light2D
+  m_ComponentVersion: 2
+  m_LightType: 3
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.579
+  m_Color: {r: 0.5377358, g: 0.16928168, b: 0.09385012, a: 1}
+  m_Intensity: 5
+  m_LightVolumeIntensity: 0.05
+  m_LightVolumeEnabled: 1
+  m_ApplyToSortingLayers: 00000000e3ba03fd0501986fc7187fa06fce5fb3
+  m_LightCookieSprite: {fileID: 0}
+  m_DeprecatedPointLightCookieSprite: {fileID: 0}
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_OverlapOperation: 0
+  m_NormalMapDistance: 3
+  m_NormalMapQuality: 2
+  m_UseNormalMap: 0
+  m_ShadowsEnabled: 1
+  m_ShadowIntensity: 0.75
+  m_ShadowSoftness: 0.3
+  m_ShadowSoftnessFalloffIntensity: 0.5
+  m_ShadowVolumeIntensityEnabled: 0
+  m_ShadowVolumeIntensity: 0.75
+  m_LocalBounds:
+    m_Center: {x: 0, y: -0.00000011920929, z: 0}
+    m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0.41
+  m_PointLightOuterRadius: 1
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
