@@ -151,7 +151,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.185
+  m_Radius: 0.26
 --- !u!114 &-806047083726167573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Hazard
   spriteFrameCount: 5
-  scaleSet: 0.185
+  scaleSet: 0.43
   damageValue: 1
   containsLight: 1
   lightSteps:

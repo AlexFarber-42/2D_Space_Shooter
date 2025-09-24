@@ -1,8 +1,6 @@
 using UnityEngine;
-using System.Net.Http.Headers;
 using System.Collections;
-
-
+using UnityEngine.Rendering.Universal;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -60,6 +58,7 @@ public class DrawerGUIMovement : MonoBehaviour
     [Tooltip("Toggle for if the user wants the drawer to slowly recede")]
     private bool slowDampOnClose;
 
+    private PixelPerfectCamera ppCam;
     private RectTransform drawerTrans;
 
     private float sWidth;
@@ -71,7 +70,7 @@ public class DrawerGUIMovement : MonoBehaviour
 
     private float PulledOutState
     {
-        get => drawerType is DrawerType.X ? WidthPosition - deltaXChange : HeightPosition + deltaYChange;
+        get => drawerType is DrawerType.X ? PushedInState - deltaXChange : PushedInState + deltaYChange;
     }
     private float PushedInState
     {
@@ -138,9 +137,10 @@ public class DrawerGUIMovement : MonoBehaviour
     private void Awake()
     {
         drawerTrans = GetComponent<RectTransform>();
+        ppCam = Camera.main.GetComponent<PixelPerfectCamera>();
 
-        sWidth  = Screen.width;
-        sHeight = Screen.height;
+        sWidth  = ppCam.refResolutionX * 2;
+        sHeight = ppCam.refResolutionY * 2;
 
         // Fix the offsets off the other parent transforms
         TrimOffsets();

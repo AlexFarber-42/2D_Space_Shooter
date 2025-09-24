@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Hazard
   spriteFrameCount: 10
-  scaleSet: 0.25
+  scaleSet: 1.15
   damageValue: 1
   containsLight: 1
   lightSteps:
@@ -218,7 +218,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.25
+  m_Radius: 0.35
 --- !u!114 &6557659865935422477
 MonoBehaviour:
   m_ObjectHideFlags: 0
