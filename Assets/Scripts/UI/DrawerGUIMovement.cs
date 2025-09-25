@@ -220,6 +220,26 @@ public class DrawerGUIMovement : MonoBehaviour
         isPullingOut    = !isPullingOut;
     }
 
+    public void TakeOutDrawer()
+    {
+        isPullingOut = true;
+
+        if (drawerType is DrawerType.X)
+            AdjustPosition(PulledOutState, HeightPosition);
+        else
+            AdjustPosition(WidthPosition, PulledOutState);
+    }
+
+    public void PushInDrawer()
+    {
+        isPullingOut = false;
+
+        if (drawerType is DrawerType.X)
+            AdjustPosition(PushedInState, HeightPosition);
+        else
+            AdjustPosition(WidthPosition, PushedInState);
+    }
+
     private Coroutine activeSlip;
 
     public void TriggerSlip()

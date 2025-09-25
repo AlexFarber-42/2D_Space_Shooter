@@ -16,6 +16,7 @@ public class Player : Entity
     private InputAction inputMovement;
     private InputAction inputFire;
     private InputAction inputTurn;
+    private InputAction inputPause;
 
     private Vector2 movementDir;
     private int turnState = 0; // -1 is left, 1 is right
@@ -42,6 +43,7 @@ public class Player : Entity
         inputMovement   = InputSystem.actions.FindAction("Move");
         inputFire       = InputSystem.actions.FindAction("Fire");
         inputTurn       = InputSystem.actions.FindAction("Turn");
+        inputPause      = InputSystem.actions.FindAction("Pause");
 
         rb              = GetComponent<Rigidbody2D>();
         health          = maxHealth;
@@ -71,6 +73,10 @@ public class Player : Entity
             StopCoroutine(isFiring);
             isFiring = null;
         }
+
+        // Player wants to pause/unpause the game
+        if (inputPause.triggered)
+            GameManager.Instance.PauseToggle();
     }
 
     private int maxTurnDegree = 20;
