@@ -48,6 +48,7 @@ public class Hazard : MonoBehaviour
 
     public void CreateHazard()
     {
+        transform.rotation = Quaternion.Euler(0f, 0f, Random.Range(0f, 180f));
         StartCoroutine(ProcessHazard());
     }
 

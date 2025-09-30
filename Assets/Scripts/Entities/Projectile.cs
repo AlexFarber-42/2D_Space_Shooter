@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
@@ -6,9 +7,12 @@ public class Projectile : MonoBehaviour
     [SerializeField] private float projectileSpeed = 10f;
     [SerializeField] private float lifeTime = 5f;
     [SerializeField] private int damage = 1;
+    [SerializeField][Tooltip("The value represents how many entities this projectile can hit before being destroyed")] private int breakthrough = 0;
+    [SerializeField] private GameObject hazardObj;
 
     private float lifeTimer = 0f;
     private Rigidbody2D rb;
+    private int breakPast = 0;
     
     private bool hostileProj;
     public bool IsHostileProjectile
@@ -20,6 +24,16 @@ public class Projectile : MonoBehaviour
     public int Damage
     {
         get => damage;
+    }
+
+    public bool FullyBrokenThrough
+    {
+        get
+        {
+            breakPast++;
+
+            return breakthrough <= breakPast;
+        }
     }
 
     private void Awake()
@@ -39,7 +53,19 @@ public class Projectile : MonoBehaviour
         lifeTimer += Time.deltaTime;
 
         if (lifeTimer >= lifeTime)
-            Pools.Instance.RemoveObject(gameObject);
+            EndProjLife();
+    }
+
+    public void EndProjLife()
+    {
+        if (hazardObj != null) 
+        {
+            GameObject hazInstance = Pools.Instance.SpawnObject(Pools.PoolType.Hazards, hazardObj, transform.position, hazardObj.transform.rotation);
+
+            hazInstance.GetComponent<Hazard>().CreateHazard();
+        }
+
+        Pools.Instance.RemoveObject(gameObject);
     }
 
     /// <summary>

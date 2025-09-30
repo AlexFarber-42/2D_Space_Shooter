@@ -16,4 +16,7 @@ public class PauseMenu : MonoBehaviour
         //  TODO ---> Add further functionality, i.e. for saving and such
         SceneManager.LoadScene(0);
     }
+
+    public void UnpauseCall()
+        => FindFirstObjectByType<Player>().UnpauseGame();
 }

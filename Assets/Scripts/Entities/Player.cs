@@ -38,6 +38,7 @@ public class Player : Entity
     {
         PlayerInput.FindActionMap("Player").Enable();
         currentProjectile = startingProj;
+        oldFireRate = fireRate;
 
         if (pauseObject == null)
         {
@@ -66,6 +67,11 @@ public class Player : Entity
 
         rb              = GetComponent<Rigidbody2D>();
         health          = maxHealth;
+    }
+
+    private void Start()
+    {
+        PlayerGUIManager.Instance.UpdatePowerup(currentProjectile);
     }
 
     private bool turnInc = false;
@@ -105,9 +111,7 @@ public class Player : Entity
 
     private void PauseToggle()
     {
-        isPaused = !isPaused;
-
-        if (isPaused)
+        if (!isPaused)
             PauseGame();
         else
             UnpauseGame();
@@ -117,6 +121,7 @@ public class Player : Entity
     {
         Time.timeScale = 0f;
         pauseObject.ActivatePause();
+        isPaused = true;
 
         try
         {
@@ -142,6 +147,7 @@ public class Player : Entity
 
         pauseObject.DeactivatePause();
         Time.timeScale = 1f;
+        isPaused = false;
     }
 
     private int maxTurnDegree = 20;
@@ -251,9 +257,21 @@ public class Player : Entity
         PlayerGUIManager.Instance.IncreaseHealthBar(healAmount);
     }
 
+    private float oldFireRate;
+
     public void UpdateProjectile(GameObject newProj)
     {
         currentProjectile = newProj;
+
+        if (newProj.name.Contains("Minigun"))
+        {
+            oldFireRate = fireRate;
+            fireRate = fireRate / 4;
+        }
+        else
+        {
+            fireRate = oldFireRate;
+        }
 
         // Modify the GUI 
         PlayerGUIManager.Instance.UpdatePowerup(newProj);
@@ -266,7 +284,9 @@ public class Player : Entity
         if (colObj.TryGetComponent(out Projectile proj) && proj.IsHostileProjectile)
         {
             Damage(proj.Damage);
-            Pools.Instance.RemoveObject(colObj);
+
+            if (proj.FullyBrokenThrough)
+                proj.EndProjLife();
         }
         else if (colObj.TryGetComponent(out Pickup pickup))
         {

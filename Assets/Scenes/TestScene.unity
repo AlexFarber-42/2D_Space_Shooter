@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f6e7dafdb62b35c45bc9b5ddba54b701, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b17306f0093bd4d5883eab5ef8ec4f8d, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -3523,17 +3523,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1719155494}
   m_CullTransparentMesh: 1
---- !u!114 &1746667883 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6256728200349362663, guid: 501fb6f50b54ee34bb386481c93b5c42, type: 3}
-  m_PrefabInstance: {fileID: 1854636586429045159}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a686e704ef965724bb5537a1cc419718, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameManager
 --- !u!1 &1888130018
 GameObject:
   m_ObjectHideFlags: 0
@@ -4265,7 +4254,7 @@ PrefabInstance:
     - target: {fileID: 5921191694582676659, guid: 0ebdd79971f9ae74fa7f4dd630409636, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1746667883}
+      objectReference: {fileID: 538128822}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

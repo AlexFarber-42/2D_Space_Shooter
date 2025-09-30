@@ -147,7 +147,9 @@ public class Enemy : Entity
         if (colObj.TryGetComponent(out Projectile proj) && !proj.IsHostileProjectile)
         {
             Damage(proj.Damage);
-            Pools.Instance.RemoveObject(colObj);
+
+            if (proj.FullyBrokenThrough)
+                proj.EndProjLife();
         }
         else if (colObj.TryGetComponent(out Hazard hazard))
         {

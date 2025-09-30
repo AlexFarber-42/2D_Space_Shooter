@@ -75,18 +75,10 @@ public class PlayerGUIManager : MonoBehaviour
 
     public void UpdatePowerup(GameObject powerupProj)
     {
-        if (powerupProj != null)
-        {
-            powerUpImage.sprite = powerupProj.GetComponent<SpriteRenderer>().sprite;
-            powerUpImage.type = Image.Type.Simple;
-            powerUpImage.preserveAspect = true;
+        powerUpImage.sprite = powerupProj.GetComponent<SpriteRenderer>().sprite;
+        powerUpImage.type = Image.Type.Simple;
+        powerUpImage.preserveAspect = true;
 
-            powerUpImage.GetComponent<RectTransform>().sizeDelta = new Vector2(50, 50);
-        }
-        else
-        {
-            powerUpImage.sprite = null; // Square
-            powerUpImage.GetComponent<RectTransform>().sizeDelta = new Vector2(25, 25);
-        }
+        powerUpImage.GetComponent<RectTransform>().sizeDelta = new Vector2(50, 50);
     }
 }
