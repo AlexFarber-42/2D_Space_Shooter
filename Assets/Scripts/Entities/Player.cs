@@ -2,6 +2,7 @@ using System.Collections;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class Player : Entity
 {
@@ -10,6 +11,7 @@ public class Player : Entity
 
     [Header("Debug/Cheat Settings")]
     [SerializeField] private bool isInvincible = false;
+    [SerializeField] private bool infiniteMoney = false;
 
     public InputActionAsset PlayerInput;
 
@@ -26,11 +28,28 @@ public class Player : Entity
     private GameObject currentProjectile;
 
     public int MaxHealth { get => maxHealth; }
+    public bool IsDamaged { get => health < MaxHealth; }
+    public bool IsDisabled { get => SceneManager.GetActiveScene().buildIndex != 1; } // Not moving or firing if not in the play scene
+
+    private PauseMenu pauseObject;
+    private ProgressBar progressBar;
 
     private void OnEnable()
     {
         PlayerInput.FindActionMap("Player").Enable();
         currentProjectile = startingProj;
+
+        if (pauseObject == null)
+        {
+            pauseObject = FindFirstObjectByType<PauseMenu>();
+            progressBar = FindFirstObjectByType<ProgressBar>();
+
+            pauseObject.DeactivatePause();
+            isPaused = false;
+        }
+
+        if (infiniteMoney)
+            BankSystem.AddMoney(999999);
     }
 
     private void OnDisable()
@@ -53,6 +72,13 @@ public class Player : Entity
 
     private void Update()
     {
+        // Player wants to pause/unpause the game
+        if (inputPause.triggered)
+            PauseToggle();
+
+        if (IsDisabled)
+            return;
+
         // Movement Direction
         movementDir = inputMovement.ReadValue<Vector2>();
 
@@ -73,10 +99,49 @@ public class Player : Entity
             StopCoroutine(isFiring);
             isFiring = null;
         }
+    }
 
-        // Player wants to pause/unpause the game
-        if (inputPause.triggered)
-            GameManager.Instance.PauseToggle();
+    private bool isPaused = false;
+
+    private void PauseToggle()
+    {
+        isPaused = !isPaused;
+
+        if (isPaused)
+            PauseGame();
+        else
+            UnpauseGame();
+    }
+
+    private void PauseGame()
+    {
+        Time.timeScale = 0f;
+        pauseObject.ActivatePause();
+
+        try
+        {
+            progressBar.GetComponent<DrawerGUIMovement>().TakeOutDrawer();
+        }
+        catch
+        {
+            // Skip if not available
+        }
+    }
+
+    // This method is public for the button to unpause within the main menu of the pause screen
+    public void UnpauseGame()
+    {
+        try
+        {
+            progressBar.GetComponent<DrawerGUIMovement>().PushInDrawer();
+        }
+        catch
+        {
+            // Skip if not available
+        }
+
+        pauseObject.DeactivatePause();
+        Time.timeScale = 1f;
     }
 
     private int maxTurnDegree = 20;
@@ -186,7 +251,7 @@ public class Player : Entity
         PlayerGUIManager.Instance.IncreaseHealthBar(healAmount);
     }
 
-    private void UpdateProjectile(GameObject newProj)
+    public void UpdateProjectile(GameObject newProj)
     {
         currentProjectile = newProj;
 
@@ -207,7 +272,7 @@ public class Player : Entity
         {
             if (pickup is Powerup powerup)
             {
-                ScoreManager.IncreaseScore(100);                // Get 100 points when a power up is acquired
+                ScoreManager.IncreaseScore(ScoreManager.PowerupPointScore);                // Get 100 points when a power up is acquired
                 UpdateProjectile(powerup.RetrieveProjData());
             }
             else

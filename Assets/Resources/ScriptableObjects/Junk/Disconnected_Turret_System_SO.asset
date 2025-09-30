@@ -14,6 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::JunkSO
   junkName: Disconnected Turret System
   junkSprite: {fileID: 21300000, guid: 91bde8eb6eafd6d4aa1738121f0c1a32, type: 3}
-  junkPrice: 100
+  junkRarity: 1
+  junkPrice: 80
+  vendorStrings:
+  - This is a Disconnected Turret System, offers a basic 2 meter plasma-kinetic projectile
+    shot to take care of any pests out of your main field of view.
+  - This is a Disconnected Turret System, capable of protecting your flanks with
+    a particle-burst projectile.
   junkEffect: 2
   junkPieceObject: {fileID: 0}

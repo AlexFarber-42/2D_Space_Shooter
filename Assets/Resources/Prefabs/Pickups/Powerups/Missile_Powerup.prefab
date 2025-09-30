@@ -51,6 +51,7 @@ MonoBehaviour:
   pickupType: 0
   value: 0
   projPrefab: {fileID: 5135164258054607143, guid: 09353ca9ea067bf42a50180a9685edbd, type: 3}
+  powerupName: Missile Launcher
 --- !u!212 &2415639506203654945
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -1,3 +1,4 @@
+using System.Text;
 using UnityEngine;
 
 public class Powerup : Pickup
@@ -5,6 +6,12 @@ public class Powerup : Pickup
     [Header("Powerup Settings")]
     // The new projectile the player has access to when picking up this powerup
     [SerializeField] private GameObject projPrefab;
+    [SerializeField] private string powerupName;
+
+    public string Name 
+    {
+        get => powerupName;
+    }
 
     public GameObject RetrieveProjData()
     {

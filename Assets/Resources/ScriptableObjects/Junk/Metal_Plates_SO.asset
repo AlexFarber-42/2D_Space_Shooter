@@ -14,6 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::JunkSO
   junkName: Metal Plates
   junkSprite: {fileID: 21300000, guid: 167f74fe85c73f2439991f113825cf3c, type: 3}
+  junkRarity: 0
   junkPrice: 25
+  vendorStrings:
+  - These Metal Plates were acquired through legal means, despite what the tag markers
+    may indicate. Can be used to strengthen and expand your ships hull.
+  - Metal Plates from a stellar battleship, strong enough for the pressures of space
+    and useful for expansion!
+  - Add on another wing or room with these Metal Plates!
   junkEffect: 0
   junkPieceObject: {fileID: 0}

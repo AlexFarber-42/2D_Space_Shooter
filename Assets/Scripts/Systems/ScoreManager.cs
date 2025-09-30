@@ -25,4 +25,8 @@ public static class ScoreManager
     {
         Score = 0;
     }
+
+    public static int MoneyPointScore { get => 2; }
+    public static int HealthPointScore { get => 10; }
+    public static int PowerupPointScore { get => 100; }
 }
