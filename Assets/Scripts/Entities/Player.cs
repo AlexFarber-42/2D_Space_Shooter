@@ -1,11 +1,16 @@
 using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
+using static UpgradeSO;
+
 public class Player : Entity
 {
+    public static Player Instance { get; private set; }
+
     [Header("Player Settings")]
     [SerializeField] private int maxHealth = 3;
 
@@ -34,6 +39,21 @@ public class Player : Entity
     private PauseMenu pauseObject;
     private ProgressBar progressBar;
 
+    private int shotsHit = 0;
+
+    public int IncrementShotsHit()
+        => ++shotsHit;
+
+    public int ShotsFired
+    {
+        get => projs_Fired;
+    }
+
+    public int Accuracy
+    {
+        get => Mathf.Clamp((int)((float)shotsHit / projs_Fired * 100), 0, 100);
+    }
+
     private void OnEnable()
     {
         PlayerInput.FindActionMap("Player").Enable();
@@ -60,7 +80,18 @@ public class Player : Entity
 
     protected override void Awake()
     {
-        inputMovement   = InputSystem.actions.FindAction("Move");
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(Instance);
+        }
+        else
+        {
+            Destroy(this);
+            return;
+        }
+
+        inputMovement = InputSystem.actions.FindAction("Move");
         inputFire       = InputSystem.actions.FindAction("Fire");
         inputTurn       = InputSystem.actions.FindAction("Turn");
         inputPause      = InputSystem.actions.FindAction("Pause");
@@ -71,7 +102,14 @@ public class Player : Entity
 
     private void Start()
     {
-        PlayerGUIManager.Instance.UpdatePowerup(currentProjectile);
+        try
+        {
+            PlayerGUIManager.Instance.UpdatePowerup(currentProjectile);
+        }
+        catch
+        {
+            // Skip if not accessible
+        }
     }
 
     private bool turnInc = false;
@@ -173,9 +211,19 @@ public class Player : Entity
         PlayerMovement();
     }
 
+    public float MovementSpeed
+    {
+        get => moveSpeed * speedMod;
+    }
+
     private void PlayerMovement()
     {
-        rb.MovePosition(rb.position + moveSpeed * Time.deltaTime * movementDir);
+        rb.MovePosition(rb.position + MovementSpeed * Time.deltaTime * movementDir);
+    }
+
+    public float FireRate
+    {
+        get => fireRate * fireRateMod;
     }
 
     protected override IEnumerator Fire()
@@ -193,7 +241,7 @@ public class Player : Entity
             proj.FireProjectile(transform.eulerAngles, transform.up);
             ++projs_Fired; // TODO ---> This is different then the other version in Fire as a data collection tool to determine a player's accuracy at the end of a round
 
-            yield return new WaitForSeconds(fireRate);
+            yield return new WaitForSeconds(FireRate);
         }
     }
 
@@ -317,6 +365,25 @@ public class Player : Entity
             Damage(damageTaken);
             WaveManager.Instance.IncrementKilled();
             Pools.Instance.RemoveObject(colObj);
+        }
+    }
+
+    private float speedMod = 1.0f;
+    private float fireRateMod = 1.0f;
+
+    public void Upgrade(UpgradeID upgradeVal)
+    {
+        switch (upgradeVal)
+        {
+            case UpgradeID.AFTERBURNERS:
+                speedMod += .2f;
+                break;
+            case UpgradeID.PRE_IGNITION:
+                fireRateMod += .33f;
+                break;
+            default:
+                Debug.LogWarning($"UpgradeID ({upgradeVal}) not implemented in Player.Upgrade(UpgradeID)");
+                break;
         }
     }
 }

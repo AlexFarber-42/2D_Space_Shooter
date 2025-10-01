@@ -29,7 +29,7 @@ public class PlayerGUIManager : MonoBehaviour
         }
 
         healthPoint = Resources.Load<GameObject>("Prefabs/UI/Health_Point");
-        playerRef = FindFirstObjectByType<Player>();
+        playerRef = Player.Instance;
     }
 
     private void Start()

@@ -18,5 +18,5 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void UnpauseCall()
-        => FindFirstObjectByType<Player>().UnpauseGame();
+        => Player.Instance.UnpauseGame();
 }

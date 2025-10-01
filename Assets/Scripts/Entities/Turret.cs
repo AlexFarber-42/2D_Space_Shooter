@@ -28,7 +28,7 @@ public class Turret : MonoBehaviour
 
     private void Start()
     {
-        playerTrack = FindFirstObjectByType<Player>().transform;
+        playerTrack = Player.Instance.transform;
         dir         = startingDir;
 
         SetTurretAngle();

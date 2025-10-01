@@ -24,10 +24,22 @@ public class WaveManager : MonoBehaviour
     private int totalKilledAmount   = 0;
     private int totalLeftAmount     = 0;
 
+    public int EnemiesLeft
+    {
+        get => totalLeftAmount;
+    }
+
+    public int EnemiesKilled
+    {
+        get => totalKilledAmount;
+    }
+
     public void IncrementKilled()
         => ++totalKilledAmount;
     public void IncrementLeft()
         => ++totalLeftAmount;
+
+    public bool WaveComplete { get; private set; }
 
     public float EnemyProgress
     {
@@ -37,7 +49,10 @@ public class WaveManager : MonoBehaviour
 
             // Just indicate the level is done if no enemies are present
             if (total == totalEnemies)
+            {
+                WaveComplete = true;
                 return 1f;
+            }
             else if (totalEnemies is 0)
                 return 0f;
 
@@ -74,6 +89,7 @@ public class WaveManager : MonoBehaviour
     {
         totalKilledAmount   = 0;
         totalLeftAmount     = 0;
+        WaveComplete        = false;
 
         progressBar.Reset();
 

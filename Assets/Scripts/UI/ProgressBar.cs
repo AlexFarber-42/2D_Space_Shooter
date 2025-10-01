@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -83,6 +84,13 @@ public class ProgressBar : MonoBehaviour
     {
         if (!levelActive)
             return;
+
+        if (waveMan.WaveComplete)
+        {
+            ToggleLevelActivity();
+            GameManager.Instance.SignalLevelComplete();
+            return;
+        }
 
         // Add any progress points if necessary
         if (container.childCount / (float)progressPointMax < waveMan.EnemyProgress)

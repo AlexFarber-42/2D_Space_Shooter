@@ -51,7 +51,7 @@ public class Spawner : MonoBehaviour
     private void Awake()
     {
         if (targetPlayer)
-            playerTransRetent = FindFirstObjectByType<Player>().transform;
+            playerTransRetent = Player.Instance.transform;
     }
 
     private void Start()

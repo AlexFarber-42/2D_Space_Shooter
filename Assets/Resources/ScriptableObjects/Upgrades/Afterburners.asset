@@ -10,9 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 51d3dc21c0ec1184da2878329a51e71c, type: 3}
-  m_Name: Afterburners_SO
+  m_Name: Afterburners
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeSO
   upgradeVal: 0
-  upgradeSprite: {fileID: 0}
+  upgradeSprite: {fileID: 21300000, guid: ace905f7196d88e478231b4639c95d16, type: 3}
   upgradeCost: 100
-  upgradeDescription: Increase the movement speed of your ship by 50%
+  upgradeDescription: Increase the movement speed of your ship by 20%
+  upgradeVendorStrings:
+  - Get more out of your fuel with these Afterburner modifications for your space
+    thrusters.
+  - These Afterburners will help you run from those bugs quicker!

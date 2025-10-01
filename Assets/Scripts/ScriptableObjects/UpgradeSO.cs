@@ -18,6 +18,7 @@ public class UpgradeSO : ScriptableObject
     [HideInInspector] public Sprite upgradeSprite;
     [HideInInspector] public int upgradeCost;
     [HideInInspector] [TextArea(3, 12)] public string upgradeDescription;
+    [HideInInspector] public string[] upgradeVendorStrings;
 }
 
 #if UNITY_EDITOR
@@ -42,6 +43,7 @@ public class UpgradeEditor: Editor
         EditorGUILayout.PropertyField(serializedObject.FindProperty("upgradeSprite"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("upgradeCost"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("upgradeDescription"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("upgradeVendorStrings"));
 
         serializedObject.ApplyModifiedProperties();
     }

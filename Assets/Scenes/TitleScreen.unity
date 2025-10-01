@@ -1536,6 +1536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c28ca0126386a64dbf8fe48739e1a5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonEffects
+  hoverEffect: 0
 --- !u!1 &309763137
 GameObject:
   m_ObjectHideFlags: 0
@@ -3715,6 +3716,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c28ca0126386a64dbf8fe48739e1a5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonEffects
+  hoverEffect: 0
 --- !u!1 &679941023
 GameObject:
   m_ObjectHideFlags: 0
@@ -3870,6 +3872,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 679941023}
   m_CullTransparentMesh: 1
+--- !u!1001 &731977714
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5058093198577610516, guid: 501fb6f50b54ee34bb386481c93b5c42, type: 3}
+      propertyPath: m_Name
+      value: Game_Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7546394967817294956, guid: 501fb6f50b54ee34bb386481c93b5c42, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7546394967817294956, guid: 501fb6f50b54ee34bb386481c93b5c42, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7546394967817294956, guid: 501fb6f50b54ee34bb386481c93b5c42, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7546394967817294956, guid: 501fb6f50b54ee34bb386481c93b5c42, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7546394967817294956, guid: 501fb6f50b54ee34bb386481c93b5c42, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7546394967817294956, guid: 501fb6f50b54ee34bb386481c93b5c42, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7546394967817294956, guid: 501fb6f50b54ee34bb386481c93b5c42, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7546394967817294956, guid: 501fb6f50b54ee34bb386481c93b5c42, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7546394967817294956, guid: 501fb6f50b54ee34bb386481c93b5c42, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7546394967817294956, guid: 501fb6f50b54ee34bb386481c93b5c42, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 501fb6f50b54ee34bb386481c93b5c42, type: 3}
 --- !u!1 &746869373
 GameObject:
   m_ObjectHideFlags: 0
@@ -4504,6 +4563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c28ca0126386a64dbf8fe48739e1a5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonEffects
+  hoverEffect: 0
 --- !u!1 &854814652
 GameObject:
   m_ObjectHideFlags: 0
@@ -5837,6 +5897,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c28ca0126386a64dbf8fe48739e1a5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonEffects
+  hoverEffect: 0
 --- !u!1 &1165937346
 GameObject:
   m_ObjectHideFlags: 0
@@ -10489,3 +10550,4 @@ SceneRoots:
   - {fileID: 1378646452}
   - {fileID: 90706823}
   - {fileID: 521159508}
+  - {fileID: 731977714}

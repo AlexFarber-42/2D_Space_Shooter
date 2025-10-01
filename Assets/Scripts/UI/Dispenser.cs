@@ -32,7 +32,7 @@ public class Dispenser : MonoBehaviour
     private void Start()
     {
         vendorComp = Vendor.Instance;
-        playerComp = FindFirstObjectByType<Player>();
+        playerComp = Player.Instance;
         accountant = FindFirstObjectByType<Accountant>();
     }
 
@@ -80,11 +80,11 @@ public class Dispenser : MonoBehaviour
         {
             case DispenserType.Health:
                 accountant.ShowCostAndEnd(HealthCost);
-                dispenseText = $"That dispenser provides a health point for ${HealthCost}";
+                dispenseText = $"That dispenser provides a health point for ${HealthCost}.";
                 break;
             case DispenserType.Powerup:
                 accountant.ShowCostAndEnd(PowerupCost);
-                dispenseText = $"That dispenser provides a random powerup for ${PowerupCost}";
+                dispenseText = $"That dispenser provides a random powerup for ${PowerupCost}.";
                 break;
             case DispenserType._Unnamed:
             default:
