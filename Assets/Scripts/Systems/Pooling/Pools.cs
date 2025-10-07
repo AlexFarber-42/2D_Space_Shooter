@@ -54,10 +54,12 @@ public class Pools : MonoBehaviour
 
             pool.OnReleaseEntity(objectToRemove);
         }
-        catch (Exception ex)
+        catch (InvalidOperationException)
         {
             // Invalid Operation Exceptions are prevalent and likely mean an object was released and freed from a pool rapidly that causes a hiccup
-
+        }
+        catch (Exception ex)
+        {
             Debug.LogWarning($"Exception caught in RemoveObject(GameObject) in Pools.cs\nException: {ex}");
         }
     }

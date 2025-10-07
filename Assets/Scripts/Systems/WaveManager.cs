@@ -1,19 +1,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 using UnityEngine;
 
 public class WaveManager : MonoBehaviour
 {
     public static WaveManager Instance { get; private set; }
-
-    private float spawnBetweenWaves = 1.5f;
-    private float spawnBetweenEnemies = .75f;
-
-    [Header("Variable Wave Limits")]
-    [SerializeField] private Vector3 minArea;
-    [SerializeField] private Vector3 maxArea;
 
     [SerializeField] private ProgressBar progressBar;
 
@@ -191,22 +183,7 @@ public class WaveManager : MonoBehaviour
                         float currentDelay = spawnDelays[j];
                         GameObject currentPathway = pathways[j];
 
-                        // Default is 0, 0
-                        Vector3 posOfSpawnOfPath = transform.position;
-
-                        // If the path is detected to be only 2, aka a travel across screen, then randomize the instantiation location 
-                        if (currentPathway.transform.childCount is 2)
-                        {
-                            Transform pathCheck = currentPathway.transform.GetChild(0);
-
-                            if (pathCheck.position.x is 0)  // Vertical Movement
-                                posOfSpawnOfPath = new Vector3(UnityEngine.Random.Range(minArea.x, maxArea.x), 0f, 0f);
-                            else                            // Horizontal Movements
-                                posOfSpawnOfPath = new Vector3(0f, UnityEngine.Random.Range(minArea.y, maxArea.y), 0f);
-                        }
-
-                        GameObject pathway = Instantiate(currentPathway, posOfSpawnOfPath, Quaternion.identity, transform);
-                        Transform[] pathPoints = pathway.GetComponent<Pathway>().GetWavePoints();
+                        Vector3[] pathPoints = currentPathway.GetComponent<Pathway>().GetPositionPoints();
 
                         // Another Coroutine is used so this coroutine continues to run and starts the coroutine groups to spawn along this one
                         if (spawnAllGroupsAtOnce)
@@ -216,7 +193,7 @@ public class WaveManager : MonoBehaviour
                         {
                             for (int k = 0; k < currentAmount; ++k)
                             {
-                                GameObject enemyInstance = Pools.Instance.SpawnObject(Pools.PoolType.Enemy, currentPrefab, pathPoints[0].position, Quaternion.identity);
+                                GameObject enemyInstance = Pools.Instance.SpawnObject(Pools.PoolType.Enemy, currentPrefab, pathPoints[0], Quaternion.identity);
                                 enemyInstance.GetComponent<Enemy>().SetPath(pathPoints[1..pathPoints.Length]);
                                 yield return new WaitForSeconds(currentDelay);
                             }
@@ -231,11 +208,11 @@ public class WaveManager : MonoBehaviour
         }
     }
 
-    private IEnumerator SpawnGroupAtOnce(GameObject currentPrefab, int currentAmount, float currentDelay, Transform[] pathPoints)
+    private IEnumerator SpawnGroupAtOnce(GameObject currentPrefab, int currentAmount, float currentDelay, Vector3[] pathPoints)
     {
         for (int k = 0; k < currentAmount; ++k)
         {
-            GameObject enemyInstance = Pools.Instance.SpawnObject(Pools.PoolType.Enemy, currentPrefab, pathPoints[0].position, Quaternion.identity);
+            GameObject enemyInstance = Pools.Instance.SpawnObject(Pools.PoolType.Enemy, currentPrefab, pathPoints[0], Quaternion.identity);
             enemyInstance.GetComponent<Enemy>().SetPath(pathPoints[1..pathPoints.Length]);
             yield return new WaitForSeconds(currentDelay);
         }
@@ -250,22 +227,7 @@ public class WaveManager : MonoBehaviour
             float currentDelay = spawnDelays[j];
             GameObject currentPathway = pathways[j];
 
-            // Default is 0, 0
-            Vector3 posOfSpawnOfPath = transform.position;
-
-            // If the path is detected to be only 2, aka a travel across screen, then randomize the instantiation location 
-            if (currentPathway.transform.childCount is 2)
-            {
-                Transform pathCheck = currentPathway.transform.GetChild(0);
-
-                if (pathCheck.position.x is 0)  // Vertical Movement
-                    posOfSpawnOfPath = new Vector3(UnityEngine.Random.Range(minArea.x, maxArea.x), 0f, 0f);
-                else                            // Horizontal Movements
-                    posOfSpawnOfPath = new Vector3(0f, UnityEngine.Random.Range(minArea.y, maxArea.y), 0f);
-            }
-
-            GameObject pathway = Instantiate(currentPathway, posOfSpawnOfPath, Quaternion.identity, transform);
-            Transform[] pathPoints = pathway.GetComponent<Pathway>().GetWavePoints();
+            Vector3[] pathPoints = currentPathway.GetComponent<Pathway>().GetPositionPoints();
 
             // Another Coroutine is used so this coroutine continues to run and starts the coroutine groups to spawn along this one
             if (spawnAllGroupsAtOnce)
@@ -275,7 +237,7 @@ public class WaveManager : MonoBehaviour
             {
                 for (int k = 0; k < currentAmount; ++k)
                 {
-                    GameObject enemyInstance = Pools.Instance.SpawnObject(Pools.PoolType.Enemy, currentPrefab, pathPoints[0].position, Quaternion.identity);
+                    GameObject enemyInstance = Pools.Instance.SpawnObject(Pools.PoolType.Enemy, currentPrefab, pathPoints[0], Quaternion.identity);
                     enemyInstance.GetComponent<Enemy>().SetPath(pathPoints[1..pathPoints.Length]);
                     yield return new WaitForSeconds(currentDelay);
                 }

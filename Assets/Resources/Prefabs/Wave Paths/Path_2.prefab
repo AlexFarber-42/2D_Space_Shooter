@@ -49,6 +49,8 @@ MonoBehaviour:
   wavePoints:
   - {fileID: 2860624057026596439}
   - {fileID: 1885548736254625521}
+  minArea: {x: -6.75, y: 0, z: 0}
+  maxArea: {x: 6.75, y: 0, z: 0}
 --- !u!1 &5839624889270222380
 GameObject:
   m_ObjectHideFlags: 0

@@ -92,14 +92,14 @@ public class Spawner : MonoBehaviour
         void SpawnUnit()
         {
             GameObject enemy = Pools.Instance.SpawnObject(Pools.PoolType.Enemy, enemyPrefab, transform.position, Quaternion.identity);
-            enemy.GetComponent<Enemy>().SetPath(new Transform[1] { GeneratePath() });
+            enemy.GetComponent<Enemy>().SetPath( new Vector3[1] { GeneratePath() });
             ++spawnCount;
         }
     }
 
     private readonly int spotPlayerThreshold = 55;
 
-    private Transform GeneratePath()
+    private Vector3 GeneratePath()
     {
         // First randomly calculate if this path will move towards the player
         if (targetPlayer)
@@ -108,18 +108,18 @@ public class Spawner : MonoBehaviour
 
             // Give path to player
             if (willTargetPlayer)
-                return playerTransRetent;
+                return playerTransRetent.position;
         }
 
         try
         {
             Vector2Int chosenPath = paths[UnityEngine.Random.Range(0, paths.Count)];
-            return BoundaryHandler.Instance.RetrieveTransform(chosenPath);
+            return BoundaryHandler.Instance.RetrieveTransform(chosenPath).position;
         }
         catch (Exception ex)
         {
             Debug.LogWarning($"Exception detected when attempting to generate a path for a spawned enemy\nException: {ex}");
-            return transform; // Simply return this transform so the enemy instantly destroys itself upon reaching its own spawn destination
+            return transform.position; // Simply return this transform so the enemy instantly destroys itself upon reaching its own spawn destination
         }
     }
 }

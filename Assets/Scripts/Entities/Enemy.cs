@@ -11,8 +11,8 @@ public class Enemy : Entity
     [SerializeField] private bool explodesOnContact = false;
     [SerializeField] private GameObject hazard;
 
-    private Transform[] wavePoints;
-    private Transform currentPoint;
+    private Vector3[] wavePoints;
+    private Vector3 currentPoint;
     private int index;
     private bool beginPathTraversal = false;
 
@@ -25,7 +25,7 @@ public class Enemy : Entity
         wm = WaveManager.Instance;
     }
 
-    public void SetPath(Transform[] path)
+    public void SetPath(Vector3[] path)
     {
         wavePoints  = path;
         index       = 0;
@@ -39,8 +39,8 @@ public class Enemy : Entity
 
     private void FollowPath()
     {
-        Vector3 vecBetween = currentPoint.position - transform.position;
-        transform.SetPositionAndRotation(Vector2.MoveTowards(transform.position, currentPoint.position, moveSpeed * Time.deltaTime), 
+        Vector3 vecBetween = currentPoint - transform.position;
+        transform.SetPositionAndRotation(Vector2.MoveTowards(transform.position, currentPoint, moveSpeed * Time.deltaTime), 
                                          Quaternion.LookRotation(Vector3.forward, moveSpeed * Time.deltaTime * -vecBetween));
     }
 
@@ -48,7 +48,7 @@ public class Enemy : Entity
     {
         if (beginPathTraversal)
         {
-            float distance = Vector2.Distance(currentPoint.position, transform.position);
+            float distance = Vector2.Distance(currentPoint, transform.position);
 
             if (distance > 0.01 + float.Epsilon)
                 FollowPath();
