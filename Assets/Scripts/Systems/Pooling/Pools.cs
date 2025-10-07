@@ -56,9 +56,9 @@ public class Pools : MonoBehaviour
         }
         catch (Exception ex)
         {
-            Debug.LogError($"Exception occurred when attempting to release an enemy {objectToRemove.name} in RemoveEnemy(GameObject) within EnemyPools.cs\nException:\n{ex}");
-            Debug.LogWarning("Destroying object instead...");
-            Destroy(objectToRemove);
+            // Invalid Operation Exceptions are prevalent and likely mean an object was released and freed from a pool rapidly that causes a hiccup
+
+            Debug.LogWarning($"Exception caught in RemoveObject(GameObject) in Pools.cs\nException: {ex}");
         }
     }
 }

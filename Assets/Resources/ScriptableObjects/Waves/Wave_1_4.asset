@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 202ecd54c3c56c5409504c2bb3b3aff4, type: 3}
-  m_Name: Wave_3
+  m_Name: Wave_1_4
   m_EditorClassIdentifier: Assembly-CSharp::WaveSO
   waves:
   - waveName: Wave
@@ -21,4 +21,4 @@ MonoBehaviour:
     spawnDelay:
     - 0.25
     - 0.25
-  pathway: {fileID: 6714700722287226529, guid: 87a5486d3ae524942a0b2f8318ef1416, type: 3}
+  pathway: {fileID: 2779955833148553276, guid: a8326a9ecc17eb64697d5925f1ba4bb4, type: 3}

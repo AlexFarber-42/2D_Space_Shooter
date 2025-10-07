@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 202ecd54c3c56c5409504c2bb3b3aff4, type: 3}
+  m_Name: Wave_1_2
+  m_EditorClassIdentifier: Assembly-CSharp::WaveSO
+  waves:
+  - waveName: 
+    spawnAllGroupsAtOnce: 0
+    timeBetweenGroups: 0.5
+    enemies:
+    - {fileID: 2511681306097961928, guid: f1c23a474d3452e43a6b57285fda7568, type: 3}
+    - {fileID: 2511681306097961928, guid: f1c23a474d3452e43a6b57285fda7568, type: 3}
+    - {fileID: 2511681306097961928, guid: f1c23a474d3452e43a6b57285fda7568, type: 3}
+    - {fileID: 2511681306097961928, guid: f1c23a474d3452e43a6b57285fda7568, type: 3}
+    numberOfEnemies: 0c0000000a000000080000000c000000
+    spawnDelay:
+    - 0.05
+    - 0.1
+    - 0.05
+    - 0.1
+    pathway:
+    - {fileID: 6714700722287226529, guid: 87a5486d3ae524942a0b2f8318ef1416, type: 3}
+    - {fileID: 2779955833148553276, guid: a8326a9ecc17eb64697d5925f1ba4bb4, type: 3}
+    - {fileID: 6714700722287226529, guid: 87a5486d3ae524942a0b2f8318ef1416, type: 3}
+    - {fileID: 2779955833148553276, guid: a8326a9ecc17eb64697d5925f1ba4bb4, type: 3}
+  - waveName: 
+    spawnAllGroupsAtOnce: 0
+    timeBetweenGroups: 1
+    enemies:
+    - {fileID: 2511681306097961928, guid: f1c23a474d3452e43a6b57285fda7568, type: 3}
+    - {fileID: 968305722208505283, guid: df78e9198732acc4097c48a186d0d263, type: 3}
+    numberOfEnemies: 0900000003000000
+    spawnDelay:
+    - 0.1
+    - 0.25
+    pathway:
+    - {fileID: 4340838529179383259, guid: 151062e48576c9043baf3d7983feb0f2, type: 3}
+    - {fileID: 4340838529179383259, guid: 151062e48576c9043baf3d7983feb0f2, type: 3}
+  - waveName: 
+    spawnAllGroupsAtOnce: 0
+    timeBetweenGroups: 0.5
+    enemies:
+    - {fileID: 2511681306097961928, guid: f1c23a474d3452e43a6b57285fda7568, type: 3}
+    - {fileID: 2511681306097961928, guid: f1c23a474d3452e43a6b57285fda7568, type: 3}
+    numberOfEnemies: 0a0000000f000000
+    spawnDelay:
+    - 0.1
+    - 0.05
+    pathway:
+    - {fileID: 7076599817731089072, guid: 1a94498e592d0074db4b671357566f6a, type: 3}
+    - {fileID: 3465662104187354012, guid: 0430fffde119f3145b5c154e7296324b, type: 3}
+  spawnAtOnce: 0
+  timeBetweenWaves: 1

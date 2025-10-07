@@ -61,7 +61,7 @@ MonoBehaviour:
   scoreValue: 5
   drops:
   - pickupPrefab: {fileID: 2366921362289610274, guid: 8b045a74a551ac146a37c19119d39554, type: 3}
-    chance: 25
+    chance: 10
   contactDmg: 1
   explodesOnContact: 0
   hazard: {fileID: 0}

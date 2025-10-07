@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
@@ -14,6 +13,7 @@ public class PauseMenu : MonoBehaviour
     public void ReturnToTitleScreen()
     {
         //  TODO ---> Add further functionality, i.e. for saving and such
+        GameManager.Instance.DestroyBackground();
         SceneManager.LoadScene(0);
     }
 

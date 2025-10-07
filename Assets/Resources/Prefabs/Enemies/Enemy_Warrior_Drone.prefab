@@ -63,7 +63,7 @@ MonoBehaviour:
   - pickupPrefab: {fileID: 5205448864696353828, guid: a39c005290f781749ae39e1b18c87d8f, type: 3}
     chance: 5
   - pickupPrefab: {fileID: 1723721203858930667, guid: 6ed1f58ab44353745af215b3c74ab765, type: 3}
-    chance: 30
+    chance: 10
   - pickupPrefab: {fileID: 2366921362289610274, guid: 8b045a74a551ac146a37c19119d39554, type: 3}
     chance: 50
   contactDmg: 1

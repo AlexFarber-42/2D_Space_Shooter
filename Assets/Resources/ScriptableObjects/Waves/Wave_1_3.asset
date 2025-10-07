@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 202ecd54c3c56c5409504c2bb3b3aff4, type: 3}
+  m_Name: Wave_1_3
+  m_EditorClassIdentifier: Assembly-CSharp::WaveSO
+  waves:
+  - waveName: 
+    spawnAllGroupsAtOnce: 0
+    timeBetweenGroups: 0.33
+    enemies:
+    - {fileID: 2511681306097961928, guid: f1c23a474d3452e43a6b57285fda7568, type: 3}
+    - {fileID: 2511681306097961928, guid: f1c23a474d3452e43a6b57285fda7568, type: 3}
+    - {fileID: 2511681306097961928, guid: f1c23a474d3452e43a6b57285fda7568, type: 3}
+    - {fileID: 2511681306097961928, guid: f1c23a474d3452e43a6b57285fda7568, type: 3}
+    - {fileID: 2511681306097961928, guid: f1c23a474d3452e43a6b57285fda7568, type: 3}
+    numberOfEnemies: 0600000006000000040000000500000005000000
+    spawnDelay:
+    - 0.2
+    - 0.2
+    - 0.1
+    - 0.15
+    - 0.15
+    pathway:
+    - {fileID: 2031754004597628359, guid: f9e007e44fafd714abfb475816b5dd9d, type: 3}
+    - {fileID: 6692683056875094144, guid: f3ff7647261aa87439487818f5cc1f84, type: 3}
+    - {fileID: 4340838529179383259, guid: 151062e48576c9043baf3d7983feb0f2, type: 3}
+    - {fileID: 6714700722287226529, guid: 87a5486d3ae524942a0b2f8318ef1416, type: 3}
+    - {fileID: 2779955833148553276, guid: a8326a9ecc17eb64697d5925f1ba4bb4, type: 3}
+  - waveName: 
+    spawnAllGroupsAtOnce: 0
+    timeBetweenGroups: 0.8
+    enemies:
+    - {fileID: 968305722208505283, guid: df78e9198732acc4097c48a186d0d263, type: 3}
+    - {fileID: 968305722208505283, guid: df78e9198732acc4097c48a186d0d263, type: 3}
+    - {fileID: 2511681306097961928, guid: f1c23a474d3452e43a6b57285fda7568, type: 3}
+    numberOfEnemies: 020000000300000005000000
+    spawnDelay:
+    - 0.3
+    - 0.3
+    - 0.1
+    pathway:
+    - {fileID: 4340838529179383259, guid: 151062e48576c9043baf3d7983feb0f2, type: 3}
+    - {fileID: 4340838529179383259, guid: 151062e48576c9043baf3d7983feb0f2, type: 3}
+    - {fileID: 8081658236936817888, guid: 5b6c37bed0be3d94398ce1f34fc84909, type: 3}
+  - waveName: 
+    spawnAllGroupsAtOnce: 0
+    timeBetweenGroups: 0.5
+    enemies:
+    - {fileID: 2511681306097961928, guid: f1c23a474d3452e43a6b57285fda7568, type: 3}
+    - {fileID: 2511681306097961928, guid: f1c23a474d3452e43a6b57285fda7568, type: 3}
+    - {fileID: 968305722208505283, guid: df78e9198732acc4097c48a186d0d263, type: 3}
+    - {fileID: 2511681306097961928, guid: f1c23a474d3452e43a6b57285fda7568, type: 3}
+    numberOfEnemies: 0c0000000c000000050000000a000000
+    spawnDelay:
+    - 0.1
+    - 0.1
+    - 0.3
+    - 0.2
+    pathway:
+    - {fileID: 3371811989555750575, guid: 027920ed923212e49b647f5e0ce88b57, type: 3}
+    - {fileID: 2031754004597628359, guid: f9e007e44fafd714abfb475816b5dd9d, type: 3}
+    - {fileID: 3465662104187354012, guid: 0430fffde119f3145b5c154e7296324b, type: 3}
+    - {fileID: 7076599817731089072, guid: 1fd915ff7522e9640b7a2df73eaddba6, type: 3}
+  - waveName: 
+    spawnAllGroupsAtOnce: 1
+    timeBetweenGroups: 0
+    enemies:
+    - {fileID: 2511681306097961928, guid: f1c23a474d3452e43a6b57285fda7568, type: 3}
+    - {fileID: 2511681306097961928, guid: f1c23a474d3452e43a6b57285fda7568, type: 3}
+    numberOfEnemies: 0f0000000f000000
+    spawnDelay:
+    - 0.1
+    - 0.1
+    pathway:
+    - {fileID: 7076599817731089072, guid: 1fd915ff7522e9640b7a2df73eaddba6, type: 3}
+    - {fileID: 7076599817731089072, guid: ba2317c0f54db8b4396c7c653c907ee3, type: 3}
+  - waveName: 
+    spawnAllGroupsAtOnce: 0
+    timeBetweenGroups: 0.5
+    enemies:
+    - {fileID: 5438829479670690293, guid: b559b111a90b33046885cb8c3c8b1bb1, type: 3}
+    - {fileID: 5438829479670690293, guid: b559b111a90b33046885cb8c3c8b1bb1, type: 3}
+    numberOfEnemies: 0200000002000000
+    spawnDelay:
+    - 1
+    - 1
+    pathway:
+    - {fileID: 4340838529179383259, guid: 151062e48576c9043baf3d7983feb0f2, type: 3}
+    - {fileID: 4340838529179383259, guid: 151062e48576c9043baf3d7983feb0f2, type: 3}
+  spawnAtOnce: 0
+  timeBetweenWaves: 0.75

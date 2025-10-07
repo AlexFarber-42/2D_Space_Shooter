@@ -81,7 +81,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -50087197
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 1253780950320791370, guid: abdcb95ed5db1ce4e8ed5cae9f83e382, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -140,9 +140,10 @@ MonoBehaviour:
   - pickupPrefab: {fileID: 5205448864696353828, guid: a39c005290f781749ae39e1b18c87d8f, type: 3}
     chance: 30
   - pickupPrefab: {fileID: 2366921362289610274, guid: 8b045a74a551ac146a37c19119d39554, type: 3}
-    chance: 75
+    chance: 95
   contactDmg: 1
   explodesOnContact: 0
+  hazard: {fileID: 0}
 --- !u!50 &7203227103578904136
 Rigidbody2D:
   serializedVersion: 5

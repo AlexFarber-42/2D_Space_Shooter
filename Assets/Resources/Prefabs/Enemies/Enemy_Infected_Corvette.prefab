@@ -239,10 +239,12 @@ MonoBehaviour:
   drops:
   - pickupPrefab: {fileID: 5205448864696353828, guid: a39c005290f781749ae39e1b18c87d8f, type: 3}
     chance: 10
-  - pickupPrefab: {fileID: 1723721203858930667, guid: 6ed1f58ab44353745af215b3c74ab765, type: 3}
-    chance: 50
+  - pickupPrefab: {fileID: 5383597629165425695, guid: b66c514378df7034c9306fecd219b02e, type: 3}
+    chance: 25
+  - pickupPrefab: {fileID: 6118624160773836779, guid: 16e65cb9b7c7a834f87ffeca3c02510c, type: 3}
+    chance: 30
   - pickupPrefab: {fileID: 2366921362289610274, guid: 8b045a74a551ac146a37c19119d39554, type: 3}
-    chance: 95
+    chance: 80
   contactDmg: 1
   explodesOnContact: 1
   hazard: {fileID: 3363487470621884915, guid: 79b5c5af4f9844e45839e50abd1590d7, type: 3}

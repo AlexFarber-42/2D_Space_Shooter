@@ -127,8 +127,13 @@ public class Enemy : Entity
 
     private void TryDropItem()
     {
+        bool playerHealthFull = Player.Instance.IsDamaged is false;
+
         foreach (Drop drop in drops)
         {
+            if (drop.pickupPrefab.name.Contains("Health") && playerHealthFull)
+                continue;
+
             int roll = UnityEngine.Random.Range(1, 101);
 
             // Drop the item
