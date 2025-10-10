@@ -151,7 +151,7 @@ public class Enemy : Entity
 
         if (colObj.TryGetComponent(out Projectile proj) && !proj.IsHostileProjectile)
         {
-            Damage(proj.Damage);
+            Damage(Player.Instance.PlayerDamage);
             Player.Instance.IncrementShotsHit();
 
             if (proj.FullyBrokenThrough)

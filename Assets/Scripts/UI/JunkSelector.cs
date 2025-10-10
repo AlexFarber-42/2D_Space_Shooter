@@ -38,4 +38,21 @@ public class JunkSelector : MonoBehaviour
         accountant.ShowCostAndEnd(retainedJunk.JunkPrice);
         return retainedJunk.vendorStrings[UnityEngine.Random.Range(0, retainedJunk.vendorStrings.Length)];
     }
+
+    public void SelectJunk()
+    {
+        switch (retainedJunk.junkEffect)
+        {
+            case JunkSO.JunkEffect.Metal:
+                BankSystem.AddMetal(retainedJunk.junkMetalAmount);
+                break;
+            case JunkSO.JunkEffect.Core:
+                BankSystem.AddCore(retainedJunk.junkCoreAmount);
+                break;
+            case JunkSO.JunkEffect.Piece:
+                break;
+            case JunkSO.JunkEffect.Module:
+                break;
+        }
+    }
 }

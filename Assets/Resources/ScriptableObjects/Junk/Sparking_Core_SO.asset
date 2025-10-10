@@ -22,4 +22,6 @@ MonoBehaviour:
   - Expand your ship's capabilities with the Sparking Core in a system you need a
     little more juice from.
   junkEffect: 1
+  junkMetalAmount: 0
+  junkCoreAmount: 1
   junkPieceObject: {fileID: 0}

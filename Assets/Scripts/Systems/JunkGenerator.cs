@@ -31,7 +31,7 @@ public class JunkGenerator : MonoBehaviour
     };
 
 
-    private void ResetJunk(int index = -1)
+    public void ResetJunk(int index = -1)
     {
         if (index is -1)    // Indicates no specific index to switch out junk, means all needs to be switched out
         {

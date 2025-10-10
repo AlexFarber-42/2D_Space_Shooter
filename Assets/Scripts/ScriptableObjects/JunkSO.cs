@@ -1,6 +1,4 @@
 using UnityEngine;
-using UnityEditorInternal;
-
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -32,8 +30,10 @@ public class JunkSO : ScriptableObject
     [HideInInspector] public int junkPrice;
     [HideInInspector][TextArea(2,8)] public string[] vendorStrings;
     [HideInInspector] public JunkEffect junkEffect;
+    [HideInInspector] public int junkMetalAmount;
+    [HideInInspector] public int junkCoreAmount;
     [HideInInspector] public GameObject junkPieceObject;
-    // [HideInInspector] public Module junkModule;
+    [HideInInspector] public ModuleSO junkModule;
 
     [HideInInspector] public int JunkPrice 
     {
@@ -90,18 +90,23 @@ public class JunkEditor: Editor
         EditorGUILayout.PropertyField(serializedObject.FindProperty("vendorStrings"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("junkEffect"));
 
+        EditorGUI.indentLevel = 1;
+        EditorGUILayout.Space(3);
+
         switch (container.junkEffect)
         {
+            case JunkSO.JunkEffect.Metal:
+                EditorGUILayout.PropertyField(serializedObject.FindProperty("junkMetalAmount"));
+                break;
+            case JunkSO.JunkEffect.Core:
+                EditorGUILayout.PropertyField(serializedObject.FindProperty("junkCoreAmount"));
+                break;
             case JunkSO.JunkEffect.Piece:
-                EditorGUI.indentLevel = 1;
-                EditorGUILayout.Space(3);
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("junkPieceObject"));
                 break;
-         // case JunkSO.JunkEffect.Module:
-              //EditorGUI.indentLevel = 1;
-              //EditorGUILayout.Space(3);
-              //EditorGUILayout.PropertyField(serializedObject.FindProperty("junkModule"));
-              //break;
+            case JunkSO.JunkEffect.Module:
+                EditorGUILayout.PropertyField(serializedObject.FindProperty("junkModule"));
+                break;
             default:
                 break;
         }

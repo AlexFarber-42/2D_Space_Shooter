@@ -226,6 +226,11 @@ public class Player : Entity
         get => fireRate * fireRateMod;
     }
 
+    public int PlayerDamage
+    {
+        get => (int)((currentProjectile.GetComponent<Projectile>().Damage + damageInc) * damageMod);
+    }
+
     protected override IEnumerator Fire()
     {
         while (true)
@@ -305,7 +310,7 @@ public class Player : Entity
         PlayerGUIManager.Instance.IncreaseHealthBar(healAmount);
     }
 
-    private float oldFireRate;
+    private float oldFireRate;  // Meant to be used for when a weapon powerup itself affects the fire rate
 
     public void UpdateProjectile(GameObject newProj)
     {
@@ -317,9 +322,7 @@ public class Player : Entity
             fireRate = fireRate / 4;
         }
         else
-        {
             fireRate = oldFireRate;
-        }
 
         // Modify the GUI 
         PlayerGUIManager.Instance.UpdatePowerup(newProj);
@@ -368,21 +371,53 @@ public class Player : Entity
         }
     }
 
-    private float speedMod = 1.0f;
-    private float fireRateMod = 1.0f;
+    private float speedMod      = 1.0f;
+    private float fireRateMod   = 1.0f;
+    private float damageMod     = 1.0f;
+    private float chargeMod     = 1.0f;
 
     public void Upgrade(UpgradeID upgradeVal)
     {
         switch (upgradeVal)
         {
             case UpgradeID.AFTERBURNERS:
-                speedMod += .2f;
+                speedMod        += .2f;
                 break;
             case UpgradeID.PRE_IGNITION:
-                fireRateMod += .33f;
+                fireRateMod     += .33f;
                 break;
             default:
                 Debug.LogWarning($"UpgradeID ({upgradeVal}) not implemented in Player.Upgrade(UpgradeID)");
+                break;
+        }
+    }
+
+    private int damageInc = 0;
+    private float chargeRate = 1.0f;
+
+    public float ChargeRate
+    {
+        get => chargeRate * chargeMod;
+    }
+
+    public void ModifyBaseStat(Meter.MeterType meterType, float valueMod)
+    {
+        switch (meterType)
+        {
+            case Meter.MeterType.FireRate:
+                fireRate    += valueMod;
+                break;
+            case Meter.MeterType.MoveSpeed:
+                moveSpeed   += valueMod;
+                break;
+            case Meter.MeterType.Damage:
+                damageInc   += (int)valueMod;
+                break;
+            case Meter.MeterType.Health:
+                maxHealth   += (int)valueMod;
+                break;
+            case Meter.MeterType.ChargeRate:
+                chargeRate  += valueMod;
                 break;
         }
     }

@@ -23,4 +23,6 @@ MonoBehaviour:
   - This Metal Piping is on sale right now for .0001% off it's original price! Expand
     that bathroom on your ship to just the right size...
   junkEffect: 0
+  junkMetalAmount: 10
+  junkCoreAmount: 0
   junkPieceObject: {fileID: 0}
